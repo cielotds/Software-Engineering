@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Software Engineering</title>
 </head>
 <body>
     <Main>
-        <section>
+        <section class="chapter">
             <h1>22<hr></h1>
             <h1>Project management</h1>
 
@@ -37,9 +39,9 @@
 
         <section>
             <article>
-                <p>Chapter 22  Project Management<hr></p>
+                <p class="title"><b>Chapter 22  Project Management</b><hr></p>
             </article>
-            <article>
+            <article class="intro">
                 <p>Software project management is an essential part of software engineering. Projects
                 need to be managed because professional software engineering is always subject to
                 organizational budget and schedule constraints. The project manager’s job is to ensure
@@ -69,11 +71,14 @@
                     Rather, they rely on others to produce evidence that they can use to review the
                     progress of the work.</li>
                     <li>Large software projects are often ‘one-off’ projects Large software projects are
-                    usually different in some ways from previous projects. Therefore, even managers who have a large body of previous experience may find it difficult to anticipate problems. Furthermore, rapid technological changes in computers and
+                    usually different in some ways from previous projects. Therefore, even managers who 
+                    have a large body of previous experience may find it difficult to anticipate problems. 
+                    Furthermore, rapid technological changes in computers and
                     communications can make a manager’s experience obsolete. Lessons learned
                     from previous projects may not be transferable to new projects</li>
                     <li>Software processes are variable and organization-specific The engineering
-                    process for some types of system, such as bridges and buildings, is well understood. However, software processes vary quite significantly from one organization
+                    process for some types of system, such as bridges and buildings, is well understood. 
+                    However, software processes vary quite significantly from one organization
                     to another. Although there has been significant progress in process standardization
                     and improvement, we still cannot reliably predict when a particular software
                     process is likely to lead to development problems. This is especially true when the
@@ -95,7 +100,8 @@
                     the work to ensure that it is carried out to the required standards and monitor
                     progress to check that the development is on time and within budget</li>
                     <li>Reporting Project managers are usually responsible for reporting on the
-                    progress of a project to customers and to the managers of the company developing the software. They have to be able to communicate at a range of levels, from
+                    progress of a project to customers and to the managers of the company developing 
+                    the software. They have to be able to communicate at a range of levels, from
                     detailed technical information to management summaries. They have to write
                     concise, coherent documents that abstract critical information from detailed
                     project reports. They must be able to present this information during progress
@@ -105,10 +111,12 @@
                     <li>People management Project managers are responsible for managing a team of
                     people. They have to choose people for their team and establish ways of work
                     ing that lead to effective team performance</li>
-                    <li>Proposal writing The first stage in a software project may involve writing a proposal to win a contract to carry out an item of work. The proposal describes the
+                    <li>Proposal writing The first stage in a software project may involve writing a 
+                        proposal to win a contract to carry out an item of work. The proposal describes the
                     objectives of the project and how it will be carried out. It usually includes cost
                     and schedule estimates and justifies why the project contract should be awarded
-                    to a particular organization or team. Proposal writing is a critical task as the survival of many software companies depends on having enough proposals
+                    to a particular organization or team. Proposal writing is a critical task as the s
+                    urvival of many software companies depends on having enough proposals
                     accepted and contracts awarded. There can be no set guidelines for this task;
                     proposal writing is a skill that you acquire through practice and experience.</li>
                 </ol>
@@ -117,8 +125,8 @@
                 planning is an important topic in its own right, which I discuss in Chapter 23.</p>
             </article>
 
-            <article>
-                <p><b>22.1 Risk Management</b></p>
+            <article class="rmarticle">
+                <p class="rm"><b>22.1 Risk Management</b></p>
                 <p>Risk management is one of the most important jobs for a project manager. Risk
                 management involves anticipating risks that might affect the project schedule or the
                 quality of the software being developed, and then taking action to avoid these risks
@@ -143,7 +151,8 @@
                 <p>Of course, these risk types overlap. If an experienced programmer leaves a
                 project this can be a project risk because, even if they are immediately replaced,
                 the schedule will be affected. It inevitably takes time for a new project member
-                to understand the work that has been done, so they cannot be immediately productive. Consequently, the delivery of the system may be delayed. The loss of a
+                to understand the work that has been done, so they cannot be immediately productive. 
+                Consequently, the delivery of the system may be delayed. The loss of a
                 team member can also be a product risk because a replacement may not be as
                 experienced and so could make programming errors. Finally, it can be a business
                 risk because that programmer’s experience may be crucial in winning new
@@ -153,14 +162,16 @@
                 product, and business. Effective risk management makes it easier to cope with
                 problems and to ensure that these do not lead to unacceptable budget or schedule
                 slippage.</p>
-                <p>The specific risks that may affect a project depend on the project and the organizational environment in which the software is being developed. However, there
+                <p>The specific risks that may affect a project depend on the project and the organizational 
+                    environment in which the software is being developed. However, there
                 are also common risks that are not related to the type of software being developed
                 and these can occur in any project. Some of these common risks are shown in
                 Figure 22.1.</p>
                 <p>Risk management is particularly important for software projects because of the
                 inherent uncertainties that most projects face. These stem from loosely defined
                 requirements, requirements changes due to changes in customer needs, difficulties in
-                estimating the time and resources required for software development, and differences in individual skills. You have to anticipate risks; understand the impact of
+                estimating the time and resources required for software development, and differences in 
+                individual skills. You have to anticipate risks; understand the impact of
                 these risks on the project, the product, and the business; and take steps to avoid these
                 risks. You may need to draw up contingency plans so that, if the risks do occur, you
                 can take immediate recovery action.</p>
@@ -186,17 +197,19 @@
                 it seems likely to be a problem.</p>
                 <p>The risk management process is an iterative process that continues throughout the
                 project. Once you have drawn up an initial risk management plan, you monitor the
-                situation to detect emerging risks. As more information about the risks becomes available, you have to reanalyze the risks and decide if the risk priority has changed. You
+                situation to detect emerging risks. As more information about the risks becomes available, 
+                you have to reanalyze the risks and decide if the risk priority has changed. You
                 may then have to change your plans for risk avoidance and contingency management</p>
 
                 <img src="assets/figure-22.2.png" alt="" height="300px" width="600px">
                 <p><b>Figure 22.2</b> The risk management process</p>
-
-                <p>22.1.1 Risk identification</p>
+                <br>
+                <p class="rmsub1">22.1.1 Risk identification</p>
                 <hr>
                 <p>Risk identification is the first stage of the risk management process. It is concerned
                 with identifying the risks that could pose a major threat to the software engineering
-                process, the software being developed, or the development organization. Risk identification may be a team process where a team get together to brainstorm possible
+                process, the software being developed, or the development organization. Risk identification 
+                may be a team process where a team get together to brainstorm possible
                 risks. Alternatively, the project manager may simply use his or her experience to
                 identify the most probable or critical risks</p>
                 <p>As a starting point for risk identification, a checklist of different types of risk may
@@ -217,10 +230,11 @@
 
                 <p>Figure 22.3 gives some examples of possible risks in each of these categories.
                 When you have finished the risk identification process, you should have a long list of
-                risks that could occur and which could affect the product, the process, and the business. You then need to prune this list to a manageable size. If you have too many
+                risks that could occur and which could affect the product, the process, and the business. 
+                You then need to prune this list to a manageable size. If you have too many
                 risks, it is practically impossible to keep track of all of them.</p>
-
-                <p>22.1.2 Risk analysis</p>
+                <br>
+                <p class="rmsub2">22.1.2 Risk analysis</p>
                 <hr>
                 <p>During the risk analysis process, you have to consider each identified risk and make
                 a judgment about the probability and seriousness of that risk. There is no easy way to
@@ -241,10 +255,12 @@
 
                 <p>You should then tabulate the results of this analysis process using a table ordered
                 according to the seriousness of the risk. Figure 22.4 illustrates this for the risks that I
-                have identified in Figure 22.3. Obviously, the assessment of probability and seriousness is arbitrary here. To make this assessment, you need detailed information about
+                have identified in Figure 22.3. Obviously, the assessment of probability and seriousness is 
+                arbitrary here. To make this assessment, you need detailed information about
                 the project, the process, the development team, and the organization.</p>
                 <p>Of course, both the probability and the assessment of the effects of a risk may
-                change as more information about the risk becomes available and as risk management plans are implemented. Therefore, you should update this table during each
+                change as more information about the risk becomes available and as risk management plans are 
+                implemented. Therefore, you should update this table during each
                 iteration of the risk process.</p>
                 <p>Once the risks have been analyzed and ranked, you should assess which of these
                 risks are most significant. Your judgment must depend on a combination of the
@@ -261,8 +277,8 @@
                 simply require too much information to be collected. From the risks identified in
                 Figure 22.4, it is appropriate to consider the 8 risks that have catastrophic or serious
                 consequences (Figure 22.5).</p>
-
-                <p>22.1.3  Risk planning</p>
+                <br>
+                <p class="rmsub3">22.1.3  Risk planning</p>
                 <hr>
                 <p>The risk planning process considers each of the key risks that have been identified,
                 and develops strategies to manage these risks. For each of the risks, you have to think
@@ -286,7 +302,8 @@
                     risk will be reduced. An example of a risk minimization strategy is the strategy
                     for staff illness shown in Figure 22.5.</li>
                     <li>Contingency plans Following these strategies means that you are prepared for
-                    the worst and have a strategy in place to deal with it. An example of a contingency strategy is the strategy for organizational financial problems that I have
+                    the worst and have a strategy in place to deal with it. An example of a contingency 
+                    strategy is the strategy for organizational financial problems that I have
                     shown in Figure 22.5.</li>
                 </ol>
 
@@ -299,8 +316,8 @@
 
                 <img src="assets/figure-22.6.png" alt="" height="300px" width="600px">
                 <p><b>Figure 22.6</b> Risk indicators</p>
-
-                <p>22.1.4  Risk monitoring</p>
+                <br>
+                <p class="rmsub4">22.1.4  Risk monitoring</p>
                 <hr>
                 <p>Risk monitoring is the process of checking that your assumptions about the product,
                 process, and business risks have not changed. You should regularly assess each of
@@ -312,11 +329,12 @@
                 examples of factors that may be helpful in assessing these risk types.
                 You should monitor risks regularly at all stages in a project. At every management
                 review, you should consider and discuss each of the key risks separately. You should
-                decide if the risk is more or less likely to arise and if the seriousness and consequences of the risk have changed.
+                decide if the risk is more or less likely to arise and if the seriousness and consequences 
+                of the risk have changed.
             </article>
 
-            <article>
-                <p><b>22.2 Managing people</b></p>
+            <article class="mparticle">
+                <p class="mp"><b>22.2 Managing people</b></p>
                 <p>The people working in a software organization are its greatest assets. It costs a lot to
                 recruit and retain good people and it is up to software managers to ensure that the
                 organiza tion gets the best possible return on its investment. In successful companies
@@ -351,7 +369,8 @@
 
                 <p>People management, in my view, is something that has to be based on experience,
                 rather than learned from a book. My aim in this section and the following section on
-                teamwork is simply to introduce some of the most important people and team management problems that affect software project management. I hope the material here will
+                teamwork is simply to introduce some of the most important people and team management 
+                problems that affect software project management. I hope the material here will
                 sensitize you to some of the problems that managers may encounter when dealing with
                 teams of technically talented individuals.</p>
 
@@ -363,12 +382,14 @@
                 If people are not motivated, they will not be interested in the work they are doing.
                 They will work slowly, be more likely to make mistakes, and will not contribute to
                 the broader goals of the team or the organization.</p>
-                <p>To provide this encouragement, you should understand a little about what motivates people. Maslow (1954) suggests that people are motivated by satisfying their
+                <p>To provide this encouragement, you should understand a little about what motivates 
+                people. Maslow (1954) suggests that people are motivated by satisfying their
                 needs. These needs are arranged in a series of levels, as shown in Figure 22.7. The
                 lower levels of this hierarchy represent fundamental needs for food, sleep, and so on,
                 and the need to feel secure in an environment. Social needs are concerned with the
                 need to feel part of a social grouping. Esteem needs represent the need to feel</p>
-                respected by others, and self-realization needs are concerned with personal development. People need to satisfy lower-level needs like hunger before the more abstract,
+                respected by others, and self-realization needs are concerned with personal development. 
+                People need to satisfy lower-level needs like hunger before the more abstract,
                 higher-level needs.
 
                 <img src="assets/figure-22.7.png" alt="" height="300px" width="600px">
@@ -383,7 +404,8 @@
                     members of a development team work in the same place but, increasingly, team
                     members are not located in the same building or even the same town or state.
                     They may work for different organizations or from home most of the time.
-                    <p>Social networking systems and teleconferencing can be used to facilitate communications but my experience with electronic systems is that they are most
+                    <p>Social networking systems and teleconferencing can be used to facilitate 
+                    communications but my experience with electronic systems is that they are most
                     effective once people know each other. You therefore need to arrange some
                     face-to-face meetings early in the project so that people can directly interact
                     with other members of the team. Through this direct interaction, people become
@@ -394,7 +416,8 @@
                     reflects their skills and experience.</li>
                     <li>Finally, to satisfy self-realization needs, you need to give people responsibility
                     for their work, assign them demanding (but not impossible) tasks, and provide a
-                    training programme where people can develop their skills. Training is an important motivating influence as people like to gain new knowledge and learn new
+                    training programme where people can develop their skills. Training is an important 
+                    motivating influence as people like to gain new knowledge and learn new
                     skills.</li>
                 </ol>
 
@@ -546,7 +569,8 @@
                   managers rarely have a completely free hand in team selection. They often have to
                   use the people who are available in the company, even when they may not be the
                   ideal people for the job.</p>   
-                  <p>As I discussed in Section 22.2.1, many software engineers are motivated prima-                      rily by their work. Software development groups, therefore, are often composed of
+                  <p>As I discussed in Section 22.2.1, many software engineers are motivated prima
+                rily by their work. Software development groups, therefore, are often composed of
                   people who have their own ideas about how technical problems should be solved.
                   This is reflected in regularly reported problems of interface standards being ignored,
                   systems being redesigned as they are coded, unnecessary system embellishments,
@@ -564,7 +588,8 @@
                   group has a good mix of interaction- and task-oriented people but I have already dis-
                   cussed, in Figure 22.8, how Dorothy’s self-oriented personality has caused problems
                   because she has not been doing the work that she expected. Fred’s part-time role in
-                  the group as a domain expert might also be a problem. He is mostly interested in technical challenges, so he may not interact well with other group members. The 
+                  the group as a domain expert might also be a problem. He is mostly interested in 
+                  technical challenges, so he may not interact well with other group members. The 
                   fact that he is not always part of the team means that he may not relate well to the
                   team’s goals.</p>
                       
@@ -593,7 +618,8 @@
                   They may then identify with these decisions rather than oppose them.</p>
                   <ol>
                     <li>Should the project manager be the technical leader of the group? The technical
-                  leader or system architect is responsible for the critical technical decisions made during software development. Sometimes, the project manager has the skill and
+                  leader or system architect is responsible for the critical technical decisions made 
+                  during software development. Sometimes, the project manager has the skill and
                   experience to take on this role. However, for large projects, it is best to appoint
                   a senior engineer to be the project architect, who will take responsibility for
                   technical leadership.</li>
@@ -624,7 +650,8 @@
                  design and implementation is the responsibility of the team member who is allocated
                 to a particular task.</p>
                 <p>Extreme programming groups (Beck, 2000) are always informal groups. XP
-                enthusiasts claim that formal structure inhibits information exchange. In XP, manydecisions that are usually seen as management decisions (such as decisions on
+                enthusiasts claim that formal structure inhibits information exchange. In XP, 
+                manydecisions that are usually seen as management decisions (such as decisions on
                 schedule) are devolved to group members. Programmers work together in pairs to
                 develop code and take joint responsibility for the programs that are developed.</p>
                 <p>Informal groups can be very successful, particularly when most group members
@@ -699,7 +726,8 @@
                   <li>Group structure People in informally structured groups communicate more
                   effectively than people in groups with a formal, hierarchical structure. In hierar-
                   chical groups, communications tend to flow up and down the hierarchy. People
-                  at the same level may not talk to each other. This is a particular problem in a large project with several development groups. If people working on different
+                  at the same level may not talk to each other. This is a particular problem in a 
+                  large project with several development groups. If people working on different
                   subsystems only communicate through their managers, then there are more
                   likely to be delays and misunderstandings.</li>
                   <li>Group composition People with the same personality types (discussed in

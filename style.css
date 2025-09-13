@@ -1,0 +1,118 @@
+h1{
+    text-align: center;
+    margin: 40px 40px;
+    font-family: "Poppins", sans-serif;
+    color:honeydew;
+
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+.chapter{
+    margin: 40px 40px;
+    padding: 20px 20px;
+    background-color:#98A1BC;
+    color:mintcream;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.title{
+    text-align: center;
+    margin: 40px 40px;
+    padding: 20px 20px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.intro{
+    margin: 40px 40px;
+    padding: 20px 20px;
+    background-color:#C4D7ED;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.rm{
+    text-align: center;
+    margin: 0.5px 40px;
+    padding: 20px 20px;
+    background-color:#98A1BC;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.rmarticle{
+    margin: 40px 40px;
+    padding: 20px 20px;
+    background-color:#C4D7ED;
+    color:#555879;
+    font-family: "Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.rmsub1{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.rmsub2{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.rmsub3{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.rmsub4{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.mp{
+    text-align: center;
+    margin: 0.5px 40px;
+    padding: 20px 20px;
+    background-color:#98A1BC;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.mparticle{
+    margin: 40px 40px;
+    padding: 20px 20px;
+    background-color:#C4D7ED;
+    color:#555879;
+    font-family: "Poppins", sans-serif;
+    border-radius: 25px;
+}
+
