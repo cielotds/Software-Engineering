@@ -11,7 +11,6 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-
 }
 
 .chapter{
@@ -22,6 +21,7 @@ img{
     font-family:"Poppins", sans-serif;
     border-radius: 25px;
 }
+
 
 .title{
     text-align: center;
@@ -41,6 +41,11 @@ img{
     font-family:"Poppins", sans-serif;
     border-radius: 25px;
 }
+
+.a{
+    font-style: italic;
+}
+
 
 .rm{
     text-align: center;
@@ -116,3 +121,57 @@ img{
     border-radius: 25px;
 }
 
+.mpsub1{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.t{
+    text-align: center;
+    margin: 0.5px 40px;
+    padding: 20px 20px;
+    background-color:#98A1BC;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.tparticle{
+    margin: 40px 40px;
+    padding: 20px 20px;
+    background-color:#C4D7ED;
+    color:#555879;
+    font-family: "Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.tsub1{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.tsub2{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
+
+.tsub3{
+    margin: 0.5px 40px;
+    padding: 10px 10px;
+    background-color:#DED3C4;
+    color:#555879;
+    font-family:"Poppins", sans-serif;
+    border-radius: 25px;
+}
