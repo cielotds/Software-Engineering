@@ -18,17 +18,17 @@
             <article>
                 <h4>Objectives</h4>
                 <p> The objective of this chapter is to discuss processes and techniques for
- developing highly dependable systems. When you have read this chapter
- you will:</p>
+                    developing highly dependable systems. When you have read this chapter
+                    you will:</p>
                     <ul>
                         <li>understand how system dependability can be achieved by using
- redundant and diverse components;</li>
+                        redundant and diverse components;</li>
                             <li> know how dependable software processes contribute to the
- development of dependable software;</li>
+                        development of dependable software;</li>
                         <li>understand how different architectural styles may be used to
- implement software redundancy and diversity;</li>
+                        implement software redundancy and diversity;</li>
                         <li> be aware of good programming practice that should be used in
- dependable systems engineering</li>
+                        dependable systems engineering</li>
                     </ul>
             </article>
 
@@ -45,77 +45,72 @@
 
         <section>
             <article>
-                <p> The use of software engineering techniques, better programming languages, and better
- quality management has led to significant improvements in dependability for most
- software. Nevertheless, system failures may still occur that affect the system’s avail
-ability or lead to incorrect results being produced. In some cases, these failures simply
- cause minor inconvenience. System vendors may simply decide to live with these fail
-ures, without correcting the errors in their systems. However, in some systems, failure
- can lead to loss of life or significant economic or reputational losses. These are known
- as ‘critical systems’, for which a high level of dependability is essential.
- Examples of critical systems include process control systems, protection systems
- that shut down other systems in the event of failure, medical systems, telecommunica
-tions switches, and flight control systems. Special development tools and techniques
- may be used to enhance the dependability of the software in a critical system. These
- tools and techniques usually increase the costs of system development but they reduce
- the risk of system failure and the losses that may result from such a failure.
- Dependability engineering is concerned with the techniques that are used to
- enhance the dependability of both critical and non-critical systems. These techniques
- support three complementary approaches that are used in developing dependable
- software</p>
+                <p>The use of software engineering techniques, better programming languages, and better
+                quality management has led to significant improvements in dependability for most
+                software. Nevertheless, system failures may still occur that affect the system’s availability
+                or lead to incorrect results being produced. In some cases, these failures simply
+                cause minor inconvenience. System vendors may simply decide to live with these failures,
+                without correcting the errors in their systems. However, in some systems, failure
+                can lead to loss of life or significant economic or reputational losses. These are known
+                as ‘critical systems’, for which a high level of dependability is essential.
+                Examples of critical systems include process control systems, protection systems
+                that shut down other systems in the event of failure, medical systems, telecommunications
+                switches, and flight control systems. Special development tools and techniques
+                may be used to enhance the dependability of the software in a critical system. These
+                tools and techniques usually increase the costs of system development but they reduce
+                the risk of system failure and the losses that may result from such a failure.
+                Dependability engineering is concerned with the techniques that are used to
+                enhance the dependability of both critical and non-critical systems. These techniques
+                support three complementary approaches that are used in developing dependable
+                software</p>
 
         <ol>
             <li><p>Fault avoidance The software design and implementation process should use
- approaches to software development that help avoid design and programming
- errors and so minimize the number of faults that are likely to arise when the sys
-tem is executing. Fewer faults mean less chance of run-time failures.</p></li>
+            approaches to software development that help avoid design and programming
+            errors and so minimize the number of faults that are likely to arise when the system is executing. Fewer faults mean less chance of run-time failures.</p></li>
             <li><p>Fault detection and correction The verification and validation processes are
- designed to discover and remove faults in a program, before it is deployed for
- operational use. Critical systems require very extensive verification and valida
-tion to discover as many faults as possible before deployment and to convince
- the system stakeholders that the system is dependable. I cover this topic in
- Chapter 15.</p></li>
+            designed to discover and remove faults in a program, before it is deployed for
+            operational use. Critical systems require very extensive verification and validationtion to discover as many faults as possible before deployment and to convince
+            the system stakeholders that the system is dependable. I cover this topic in
+            Chapter 15.</p></li>
             <li><p>Fault tolerance The system is designed so that faults or unexpected system
- behavior during execution are detected at run-time and are managed in such a
- way that system failure does not occur. Simple approaches to fault tolerance
- based on built-in run-time checking may be included in all systems. However,
- more specialized fault-tolerance techniques (such as the use of fault-tolerant
- system architectures) are generally only used when a very high level of system
- availability and reliability is required.</p></li>
+            behavior during execution are detected at run-time and are managed in such a
+            way that system failure does not occur. Simple approaches to fault tolerance
+            based on built-in run-time checking may be included in all systems. However,
+            more specialized fault-tolerance techniques (such as the use of fault-tolerant
+            system architectures) are generally only used when a very high level of system
+            availability and reliability is required.</p></li>
         </ol>
 
-        <p> Unfortunately, applying fault-avoidance, fault-detection, and fault-tolerance tech
-niques leads to a situation of diminishing returns. The cost of finding and removing the
- remaining faults in a software system rises exponentially as program faults are discov
-ered and removed (Figure 13.1). As the software becomes more reliable, you need to
- spend more and more time and effort to find fewer and fewer faults. At some stage,
- even for critical systems, the costs of this additional effort become unjustifiable.
-</p>
+        <p> Unfortunately, applying fault-avoidance, fault-detection, and fault-tolerance techniques leads to a situation of diminishing returns. The cost of finding and removing the
+            remaining faults in a software system rises exponentially as program faults are discovered and removed (Figure 13.1). As the software becomes more reliable, you need to
+            spend more and more time and effort to find fewer and fewer faults. At some stage,
+            even for critical systems, the costs of this additional effort become unjustifiable.
+        </p>
             </article>
 
             <article>
                 <img src="assets/Figure13.png" alt="">
                 <p> As a result, software development companies accept that their software will
- always contain some residual faults. The level of faults depends on the type of sys
-tem. Shrink-wrapped products have a relatively high level of faults, whereas critical
- systems usually have a much lower fault density.</p>
+                always contain some residual faults. The level of faults depends on the type of system. Shrink-wrapped products have a relatively high level of faults, whereas critical
+                systems usually have a much lower fault density.</p>
                 <p> The rationale for accepting faults is that, if and when the system fails, it is cheaper
- to pay for the consequences of failure than it would be to discover and remove the
- faults before system delivery. However, as discussed in Chapter 11, the decision to
- release faulty software is not simply an economic decision. The social and political
- acceptability of system failure must also be taken into account.</p>
+                to pay for the consequences of failure than it would be to discover and remove the
+                faults before system delivery. However, as discussed in Chapter 11, the decision to
+                release faulty software is not simply an economic decision. The social and political
+                acceptability of system failure must also be taken into account.</p>
                 <p> Many critical systems, such as aircraft systems, medical systems, and accounting
- systems, are used in regulated domains such as air transport, medicine, and finance.
- National governments define regulations that apply in these domains and appoint a
- regulatory body to ensure that companies follow these regulations. In practice, this
- means that the regulator often has to be convinced that critical software systems can be
- trusted and this requires clear evidence that shows that these systems are dependable.</p>
+                systems, are used in regulated domains such as air transport, medicine, and finance.
+                National governments define regulations that apply in these domains and appoint a
+                regulatory body to ensure that companies follow these regulations. In practice, this
+                means that the regulator often has to be convinced that critical software systems can be
+                trusted and this requires clear evidence that shows that these systems are dependable.</p>
                 <p>Therefore, the development process for critical systems is not just concerned with
- producing a dependable system; it must also produce the evidence that can convince
- a regulator that the system is dependable. Producing such evidence consumes a high
- proportion of the development costs for critical systems and so is an important con
-tributory factor to the high costs of critical systems. I discuss the issues of producing
- safety and dependability cases in Chapter 15.</p>
+                producing a dependable system; it must also produce the evidence that can convince
+                a regulator that the system is dependable. Producing such evidence consumes a high
+                proportion of the development costs for critical systems and so is an important con
+                tributory factor to the high costs of critical systems. I discuss the issues of producing
+                safety and dependability cases in Chapter 15.</p>
             </article>
         </section>
 
@@ -139,54 +134,44 @@ tributory factor to the high costs of critical systems. I discuss the issues of 
                 with disk failure, backups should be kept on a separate, diverse, external device.</p>
 
                 <p> Software systems that are designed for dependability may include redundant components that provide the same functionality as other system components. These are
- switched into the system if the primary component fails. If these redundant components are diverse (i.e., not the same as other components), a common fault in replicated
- components will not result in a system failure. Redundancy may also be provided by
- including additional checking code, which is not strictly necessary for the system to
- function. This code can detect some kinds of faults before they cause failures. It can
- invoke recovery mechanisms to ensure that the system continues to operate.</p>
+                switched into the system if the primary component fails. If these redundant components are diverse (i.e., not the same as other components), a common fault in replicated
+                components will not result in a system failure. Redundancy may also be provided by
+                including additional checking code, which is not strictly necessary for the system to
+                function. This code can detect some kinds of faults before they cause failures. It can
+                invoke recovery mechanisms to ensure that the system continues to operate.</p>
 
                 <p>In systems for which availability is a critical requirement, redundant servers are
- normally used. These automatically come into operation if a designated server fails.
- Sometimes, to ensure that attacks on the system cannot exploit a common vulnera
-bility, these servers may be of different types and may run different operating sys
-tems. Using different operating systems is one example of software diversity and
- redundancy, where comparable functionality is provided in different ways. I discuss
- software diversity in more detail in Section 13.3.4.</p>
+                normally used. These automatically come into operation if a designated server fails.
+                Sometimes, to ensure that attacks on the system cannot exploit a common vulnerability, these servers may be of different types and may run different operating systems. Using different operating systems is one example of software diversity and
+                redundancy, where comparable functionality is provided in different ways. I discuss
+                software diversity in more detail in Section 13.3.4.</p>
 
                 <p>Diversity and redundancy may also be also used to achieve dependable processes
- by ensuring that process activities, such as software validation, do not rely on a sin
-gle process or method. This improves software dependability because it reduces the
- chances of process failure, where human errors made during the software develop
-ment process lead to software errors. For example, validation activities may include
- program testing, manual program inspections, and static analysis as fault-finding
- techniques. These are complementary techniques in that any one technique might
- find faults that are missed by the other methods. Furthermore, different team mem
-bers may be responsible for the same process activity (e.g., a program inspection).
-</p>
+                by ensuring that process activities, such as software validation, do not rely on a single process or method. This improves software dependability because it reduces the
+                chances of process failure, where human errors made during the software development process lead to software errors. For example, validation activities may include
+                program testing, manual program inspections, and static analysis as fault-finding
+                techniques. These are complementary techniques in that any one technique might
+                find faults that are missed by the other methods. Furthermore, different team members may be responsible for the same process activity (e.g., a program inspection).
+                </p>
 
                 <p>People tackle tasks in different ways depending on their personality, experience, and
- education, so this kind of redundancy provides a diverse perspective on the system.</p>
+                education, so this kind of redundancy provides a diverse perspective on the system.</p>
                     
                 <p>As I discuss in Section 13.3.4, achieving software diversity is not straightforward.
- Diversity and redundancy make systems more complex and usually harder to under
-stand. Not only is there more code to write and check, additional functionality must also
- be added to the system to detect component failure and to switch control to alternative
- components. This additional complexity means that it is more likely that programmers
- will make errors and less likely that people checking the system will find these errors.</p>
+                Diversity and redundancy make systems more complex and usually harder to understand. Not only is there more code to write and check, additional functionality must also
+                be added to the system to detect component failure and to switch control to alternative
+                components. This additional complexity means that it is more likely that programmers
+                will make errors and less likely that people checking the system will find these errors.</p>
 
                 <p>As a consequence, some people think that it is best to avoid software redundancy
- and diversity. Their view is that the best approach is to design the software to be as sim
-ple as possible, with extremely rigorous software verification and validation proce
-dures (Parnas et al., 1990). More can be spent on verification and validation because of
- the savings that result from not having to develop redundant software components.</p>
+                and diversity. Their view is that the best approach is to design the software to be as simple as possible, with extremely rigorous software verification and validation procedures (Parnas et al., 1990). More can be spent on verification and validation because of dures (Parnas et al., 1990). More can be spent on verification and validation because of
+                the savings that result from not having to develop redundant software components.</p>
 
                 <p>Both approaches are used in commercial, safety-critical systems. For example,
- the Airbus 340 flight control hardware and software is both diverse and redundant
- (Storey, 1996). The flight control software on the Boeing 777 is based on a redun
-dant hardware but each computer runs the same software, which has been exten
-sively validated. The Boeing 777 flight control system designers have focused on
- simplicity rather than redundancy. Both of these aircraft are very reliable, so both the
- diverse and the simple approach to dependability can clearly be successful.</p>
+                the Airbus 340 flight control hardware and software is both diverse and redundant
+                (Storey, 1996). The flight control software on the Boeing 777 is based on a redundant hardware but each computer runs the same software, which has been extensively validated. The Boeing 777 flight control system designers have focused on
+                simplicity rather than redundancy. Both of these aircraft are very reliable, so both the
+                diverse and the simple approach to dependability can clearly be successful.</p>
             
             </article>
         </section>
@@ -196,110 +181,102 @@ sively validated. The Boeing 777 flight control system designers have focused on
                 <h3>2. Dependable Processes</h3>
 
                 <p> Dependable software processes are software processes that are designed to produce
- dependable software. A company using a dependable process can be sure that the
- process has been properly enacted and documented and that appropriate development
- techniques have been used for critical systems development. The rationale for invest
-ing in dependable processes is that a good software process is likely to lead to deliv
-ered software that contains fewer errors and is therefore less likely to fail in execution.
- Figure 13.2 shows some of the attributes of dependable software processes.</p>
+                dependable software. A company using a dependable process can be sure that the
+                process has been properly enacted and documented and that appropriate development
+                techniques have been used for critical systems development. The rationale for investing in dependable processes is that a good software process is likely to lead to delivered software that contains fewer errors and is therefore less likely to fail in execution.
+                Figure 13.2 shows some of the attributes of dependable software processes.</p>
 
             <img src="assets/Figure14.png" alt="">    
 
-                <p>The evidence that a dependable process has been used is often important in con
-vincing a regulator that the most effective software engineering practice has been
- applied in developing the software. System developers will normally present a
- model of the process to a regulator, along with evidence that the process has been followed. The regulator also has to be convinced that the process is used consistently
- by all of the process participants and that it can be used in different development
- projects. This means that the process must be explicitly defined and repeatable:</p>
+                <p>The evidence that a dependable process has been used is often important in convincing a regulator that the most effective software engineering practice has been
+                applied in developing the software. System developers will normally present a
+                model of the process to a regulator, along with evidence that the process has been followed. The regulator also has to be convinced that the process is used consistently
+                by all of the process participants and that it can be used in different development
+                projects. This means that the process must be explicitly defined and repeatable:</p>
 
                 <ol>
                 <p><li> An explicitly defined process is one that has a defined process model that is used
- to drive the software production process. There must be data collected during
- the process that demonstrates that all of the necessary steps in the process model
- have been enacted.</li></p>
+                to drive the software production process. There must be data collected during
+                the process that demonstrates that all of the necessary steps in the process model
+                have been enacted.</li></p>
 
                 <p><li> A repeatable process is one that does not rely on individual interpretation and
- judgment. Rather, the process can be repeated across projects and with different
- team members, irrespective of who is involved in the development. This is par
-ticularly important for critical systems, which often have a long development
- cycle during which there are often significant changes in the development team.</li></p>
+                judgment. Rather, the process can be repeated across projects and with different
+                team members, irrespective of who is involved in the development. This is particularly important for critical systems, which often have a long development
+                cycle during which there are often significant changes in the development team.</li></p>
                 </ol>
 
-                <p> Dependable processes make use of redundancy and diversity to achieve reliabil
-ity. They often include different activities that have the same aim. For example, pro
-gram inspections and testing aim to discover errors in a program. The approaches are
- complementary so that together they are likely to discover a higher proportion of
- errors than would be found using one technique on its own.</p>
+                <p> Dependable processes make use of redundancy and diversity to achieve reliability. They often include different activities that have the same aim. For example, program inspections and testing aim to discover errors in a program. The approaches are complementary so that together they are likely to discover a higher proportion of errors than would be found using one technique on its own.</p>
+                complementary so that together they are likely to discover a higher proportion of
+                errors than would be found using one technique on its own.</p>
 
                 <p> The activities that are used in dependable processes obviously depend on the type
- of software that is being developed. In general, however, these activities should be
- geared to avoiding the introduction of errors into a system, detecting and removing
- errors, and maintaining information about the process itself. Examples of activities
- that might be included in a dependable process include:</p>
+                of software that is being developed. In general, however, these activities should be
+                geared to avoiding the introduction of errors into a system, detecting and removing
+                errors, and maintaining information about the process itself. Examples of activities
+                that might be included in a dependable process include:</p>
 
                 <ol>
                     <p><li>Requirements reviews to check that the requirements are, as far as possible,
- complete and consistent.</li></p>
+                    complete and consistent.</li></p>
                     
-                    <p><li>Requirements management to ensure that changes to the requirements are con
-trolled and that the impact of proposed requirements changes is understood by
- all developers affected by the change.</li></p>
+                    <p><li>Requirements management to ensure that changes to the requirements are controlled and that the impact of proposed requirements changes is understood by
+                    all developers affected by the change.</li></p>
 
                     <p><li>Formal specification, where a mathematical model of the software is created
- and analyzed. I discussed the benefits of formal specification in Chapter 12.
- Perhaps its most important benefit is that it forces a very detailed analysis of the
- system requirements. This analysis itself is likely to discover requirements
- problems that may have been missed in requirements reviews.</li></p>
+                    and analyzed. I discussed the benefits of formal specification in Chapter 12.
+                    Perhaps its most important benefit is that it forces a very detailed analysis of the
+                    system requirements. This analysis itself is likely to discover requirements
+                    problems that may have been missed in requirements reviews.</li></p>
 
                     <p><li>System modeling, where the software design is explicitly documented as a set of
- graphical models, and the links between the requirements and these models are
- explicitly documented.</li></p>
+                    graphical models, and the links between the requirements and these models are
+                    explicitly documented.</li></p>
 
                     <p><li>Design and program inspections, where the different descriptions of the system
- are inspected and checked by different people. Inspections are often driven by
- checklists of common design and programming errors.</li></p>
+                    are inspected and checked by different people. Inspections are often driven by
+                    checklists of common design and programming errors.</li></p>
 
                     <p><li>Static analysis, where automated checks are carried out on the source code of
- the program. These look for anomalies that could indicate programming errors
- or omissions. I discuss static analysis in Chapter 15.</li></p>
+                    the program. These look for anomalies that could indicate programming errors
+                    or omissions. I discuss static analysis in Chapter 15.</li></p>
 
                     <p><li>Test planning and management, where a comprehensive set of system tests is
- designed. The testing process has to be carefully managed to demonstrate that
- these tests provide coverage of the system requirements and have been correctly
- applied in the testing process.</li></p>
+                    designed. The testing process has to be carefully managed to demonstrate that
+                    these tests provide coverage of the system requirements and have been correctly
+                    applied in the testing process.</li></p>
                 </ol>
 
                 <p> As well as process activities that focus on system development and testing, there
- must also be well-defined quality management and change management processes.
- Although the specific activities in a dependable process may vary from one company
- to another, the need for effective quality and change management is universal.</p>
+                must also be well-defined quality management and change management processes.
+                Although the specific activities in a dependable process may vary from one company
+                to another, the need for effective quality and change management is universal.</p>
 
                 <p> Quality management processes (discussed in Chapter 24) establish a set of process
- and product standards. They also include activities that capture process information
- to demonstrate that these standards have been followed. For example, there may be a
- standard defined for carrying out program inspections. The inspection team leader is
- responsible for documenting the process to show that the inspection standard has
- been followed</p>
+                and product standards. They also include activities that capture process information
+                to demonstrate that these standards have been followed. For example, there may be a
+                standard defined for carrying out program inspections. The inspection team leader is
+                responsible for documenting the process to show that the inspection standard has
+                been followed</p>
 
                 <p>Change management, discussed in Chapter 25, is concerned with managing
- changes to a system, ensuring that accepted changes are actually implemented and
- confirming that planned releases of the software include the planned changes. One
- common problem with software is that the wrong components are included in a system
- build. This can lead to a situation where an executing system includes components that
- have not been checked during the development process. Configuration management
- procedures must be defined as part of the change management process to ensure that
- this does not happen.</p>
+                changes to a system, ensuring that accepted changes are actually implemented and
+                confirming that planned releases of the software include the planned changes. One
+                common problem with software is that the wrong components are included in a system
+                build. This can lead to a situation where an executing system includes components that
+                have not been checked during the development process. Configuration management
+                procedures must be defined as part of the change management process to ensure that
+                this does not happen.</p>
 
                 <p> There is a widely held view that agile approaches, as discussed in Chapter 3, are
- not really suitable for dependable processes (Boehm, 2002). Agile approaches focus
- on developing the software rather than on documenting what has been done. They
- often have a fairly informal approach to change and quality management. Plan-based
- approaches to dependable systems development, which create documentation that
- regulators and other external system stakeholders can understand, are generally pre
-ferred. Nevertheless, the benefits of agile approaches are equally applicable to criti
-cal systems. There have been reports of successes in applying agile methods in this
- area (Lindvall, et al., 2004) and it is likely that variants of agile methods that are suit
-able for critical systems engineering will be developed.</p>
+                not really suitable for dependable processes (Boehm, 2002). Agile approaches focus
+                on developing the software rather than on documenting what has been done. They
+                often have a fairly informal approach to change and quality management. Plan-based
+                approaches to dependable systems development, which create documentation that
+                regulators and other external system stakeholders can understand, are generally preferred. Nevertheless, the benefits of agile approaches are equally applicable to critical systems. There have been reports of successes in applying agile methods in this area (Lindvall, et al., 2004) and it is likely that variants of agile methods that are suitable for critical systems engineering will be developed.</p>
+                Nevertheless, the benefits of agile approaches are equally applicable to critical systems. There have been reports of successes in applying agile methods in this
+                area (Lindvall, et al., 2004) and it is likely that variants of agile methods that are suitable
+                able for critical systems engineering will be developed.</p>
             </article>
         </section>
 
@@ -619,9 +596,8 @@ tiversion system are worth the extra development costs. For many systems, the ex
         <section>
 
             <article>
-                <ul>
-                    <h3>4. Dependable Programming</h3>
-                </ul>
+                 <h3>4. Dependable Programming</h3>
+
 
                 <p>Generally, I have avoided discussions of programming in this book because it is
  almost impossible to discuss programming without getting into the details of a spe
