@@ -1,1 +1,242 @@
-@import "tailwindcss";
+@theme {
+    --color-primary: #0B735F;
+    --color-secondary: #E3DBA9;
+}
+
+@layer components {
+    .table-of-contents {
+        @apply font-semibold text-sm sm:text-base mb-3 text-primary block py-2 px-4 rounded hover:bg-primary/10 transition flex items-center;
+    }
+
+    .layout {
+        @apply font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md;
+    }
+
+    .li {
+        @apply list-none;
+    }
+
+    .h2 {
+        @apply text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent;
+    }
+
+    .title {
+        @apply text-lg sm:text-xl font-semibold mb-4 text-primary flex items-center;
+    }
+
+    .s-title {
+        @apply font-bold text-primary mb-2 text-sm sm:text-base;
+    }
+
+    .paragraph {
+        @apply mb-4 text-sm sm:text-base;
+    }
+
+    .unordered-l {
+        @apply list-disc pl-4 sm:pl-6 space-y-2 text-sm sm:text-base;
+    }
+
+    .ordered-l {
+        @apply list-decimal pl-4 sm:pl-6 space-y-2 text-sm sm:text-base;
+    }
+
+    .contents {
+        @apply text-primary hover:underline;
+    }
+
+    .h4-key-terms {
+        @apply font-bold text-primary mb-2 text-sm sm:text-base;
+    }
+
+    .h5-key-terms {
+        @apply font-bold mb-2 text-primary text-sm sm:text-base;
+    }
+
+    .grid-key-terms {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3;
+    }
+
+    .key-terms {
+        @apply font-medium text-primary text-sm sm:text-base;
+    }
+
+    .key-terms-bg {
+        @apply bg-primary/10 p-3 sm:p-4 rounded-lg my-4;
+    }
+
+    .key-terms-bg1 {
+        @apply bg-white p-2 sm:p-3 rounded shadow-sm;
+    }
+
+    .key-terms-description {
+        @apply text-xs sm:text-sm;
+    }
+
+    .h5d-key-terms {
+        @apply text-xs sm:text-sm;
+    }
+
+    .h5border {
+        @apply border border-gray-200 rounded-lg p-3 sm:p-4 text-center transition duration-300 hover:bg-primary/10;
+    }
+
+    .approaches {
+        @apply text-primary font-semibold mb-3 text-sm sm:text-base;
+    }
+
+    .rd-border1 {
+        @apply border border-primary/30 rounded-lg p-3 sm:p-4 bg-primary/10 transition duration-300;
+    }
+
+    .rd-text {
+        @apply text-sm sm:text-base;
+    }
+
+    .rd-example {
+        @apply text-xs sm:text-sm font-medium;
+    }
+
+    .rd-border2 {
+        @apply border border-primary/30 rounded-lg p-3 sm:p-4 bg-primary/10 transition duration-300 hover:bg-primary/10;
+    }
+
+    .rd-h5 {
+        @apply text-primary font-medium text-sm sm:text-base;
+    }
+
+    .rd-border3 {
+        @apply bg-yellow-50 border border-secondary rounded-lg p-3 sm:p-4 my-4 transition duration-300 hover:bg-secondary;
+    }
+
+    .dp-h4 {
+        @apply text-primary font-semibold mb-3 text-sm sm:text-base;
+    }
+
+    .dp-bg {
+        @apply bg-primary/10 rounded-lg p-3 sm:p-4 border border-primary/30;
+    }
+
+    .dp-bg2 {
+        @apply bg-primary/10 p-3 sm:p-4 rounded-lg my-4 transition duration-300 hover:bg-primary/10;
+    }
+
+    .dp-bg3 {
+        @apply flex-1 bg-white p-2 sm:p-3 rounded shadow-sm transition duration-300 hover:shadow;
+    }
+
+    .dp-table {
+        @apply flex flex-col md:flex-row border-b border-primary/30 pb-3;
+    }
+
+    .dpt-title {
+        @apply md:w-1/3 font-semibold text-primary mb-1 md:mb-0 text-sm sm:text-base;
+    }
+
+    .dpt-p {
+        @apply md:w-2/3 text-gray-700 text-sm sm:text-base;
+    }
+
+    .dptitle-h4 {
+        @apply font-semibold mb-3 text-primary text-sm sm:text-base;
+    }
+
+    .dp-border {
+        @apply border-l-4 border-primary pl-3 sm:pl-4 py-1 transition duration-300 hover:bg-primary/10 rounded-r;
+    }
+
+    .dp-list {
+        @apply flex items-start p-2 rounded transition duration-300 hover:bg-gray-100;
+    }
+
+    .dpl-bg {
+        @apply bg-primary text-white rounded-full p-1 mr-3 mt-1 flex-shrink-0;
+    }
+
+    .dpl-text {
+        @apply text-sm sm:text-base;
+    }
+
+    .dp-position {
+        @apply flex flex-col sm:flex-row gap-3 sm:gap-4;
+    }
+
+    .dp-ul {
+        @apply text-xs sm:text-sm space-y-1;
+    }
+
+    .dp-li {
+        @apply flex items-start;
+    }
+
+    .ds-border1 {
+        @apply border border-gray-200 rounded-lg p-3 sm:p-4 transition duration-300 hover:bg-primary/10;
+    }
+
+    .ds-border2 {
+        @apply border border-gray-200 rounded-lg p-3 sm:p-4 transition duration-300 hover:bg-secondary;
+    }
+
+    .ds-text {
+        @apply mb-3 text-sm sm:text-base;
+    }
+
+    .ds-inside {
+        @apply bg-gray-100 p-2 sm:p-3 rounded text-xs sm:text-sm transition duration-300 hover:bg-gray-200;
+    }
+
+    .ds-ul {
+        @apply text-xs sm:text-sm space-y-1;
+    }
+
+    .ds-il {
+        @apply flex items-start;
+    }
+
+    .ds-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4;
+    }
+
+    .ds-tran {
+        @apply p-3 sm:p-4 rounded-lg transition duration-300 hover:bg-primary/30;
+    }
+
+    .ds-tran2 {
+        @apply p-3 sm:p-4 rounded-lg transition duration-300 hover:bg-primary/30;
+    }
+
+    .ds-t {
+        @apply font-medium mb-2 text-sm sm:text-base;
+    }
+
+    .dp4-space {
+        @apply space-y-4 sm:space-y-6;
+    }
+
+    .dp4-border {
+        @apply border-l-4 border-primary pl-3 sm:pl-4 transition duration-300 hover:bg-primary/10 rounded-r;
+    }
+
+    .dp4-txt {
+        @apply font-bold text-primary text-sm sm:text-base;
+    }
+
+    .dp4-p {
+        @apply mt-1 text-sm sm:text-base;
+    }
+
+    .kp-space {
+        @apply space-y-4 sm:space-y-6;
+    }
+
+    .kp-b {
+        @apply flex items-start p-3 sm:p-4 bg-primary/10 rounded-lg;
+    }
+
+    .kp-t {
+        @apply text-gray-700 text-sm sm:text-base;
+    }
+
+    .span {
+        @apply font-semibold text-primary;
+    }
+}

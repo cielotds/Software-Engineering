@@ -7,32 +7,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="bg-[#E3DBA9] text-gray-800">
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-4 sm:py-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h1 class="font-mono text-xl sm:text-2xl md:text-3xl font-bold text-[#0B735F]">Chapter 13: Dependability Engineering</h1>
-                </div>
-            </div>
-        </div>
-    </header>
+<body class="bg-gray-50 text-gray-800">
 
     <!--Chapter Nav-->
     <main class="container mx-auto px-4 py-6 sm:py-8">
         <div class="flex flex-col lg:flex-row gap-6 sm:gap-8">
             <aside class="lg:w-1/4">
                 <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 sticky top-4">
-                    <h3 class="font-bold text-lg mb-4 text-[#0B735F]">Table of Contents</h3>
+                    <h3 class = "title">Table of Contents</h3>
                     <ul class="space-y-2">
-                        <li><a href="#objectives" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Objectives</a></li>
-                        <li><a href="#contents" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Contents</a></li>
-                        <li><a href="#introduction" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Introduction</a></li>
-                        <li><a href="#redundancy" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Redundancy & Diversity</a></li>
-                        <li><a href="#process" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Dependable Process</a></li>
-                        <li><a href="#architecture" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">System Architecture</a></li>
-                        <li><a href="#programming" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Dependable Programming</a></li>
-                        <li><a href="#keypoints" class="font-semibold text-sm sm:text-base mb-3 text-[#0B735F] block py-2 px-4 rounded hover:bg-[#0B735F]/10 transition flex items-center">Key Points</a></li>
+                        <li class = "li"><a href="#objectives" class="table-of-contents">Objectives</a></li>
+                        <li class="li"><a href="#contents" class="table-of-contents">Contents</a></li>
+                        <li class="li"><a href="#introduction" class="table-of-contents">Introduction</a></li>
+                        <li class="li"><a href="#redundancy" class="table-of-contents">Redundancy & Diversity</a></li>
+                        <li class="li"><a href="#process" class="table-of-contents">Dependable Process</a></li>
+                        <li class="li"><a href="#architecture" class="table-of-contents">System Architecture</a></li>
+                        <li class="li"><a href="#programming" class="table-of-contents">Dependable Programming</a></li>
+                        <li class="li"><a href="#keypoints" class="table-of-contents">Key Points</a></li>
                     </ul>
                 </div>
             </aside>
@@ -41,12 +32,12 @@
             <div class="lg:w-3/4">
                 <!--Objectives-->
                 <section id="objectives" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-4 bg-gradient-to-r from-[#0B735F] to-[#2a3150] bg-clip-text text-transparent">Chapter 13: Dependability Engineering</h2>
+                    <div class="layout">
+                        <h2 class = "h2">Chapter 13: Dependability Engineering</h2>
                         <div class="mb-6">
-                            <h3 class="text-lg sm:text-xl font-semibold mb-3 text-[#0B735F] flex items-center">Objectives</h3>
-                            <p class="mb-4 text-sm sm:text-base">The objective of this chapter is to discuss processes and techniques for developing highly dependable systems. When you have read this chapter you will:</p>
-                            <ul class="list-disc pl-4 sm:pl-6 space-y-2 text-sm sm:text-base">
+                            <h3 class = "title">Objectives</h3>
+                            <p class = "paragraph">The objective of this chapter is to discuss processes and techniques for developing highly dependable systems. When you have read this chapter you will:</p>
+                            <ul class = "unordered-l">
                                 <li>Understand how system dependability can be achieved by using redundant and diverse components</li>
                                 <li>Know how dependable software processes contribute to the development of dependable software</li>
                                 <li>Understand how different architectural styles may be used to implement software redundancy and diversity</li>
@@ -58,55 +49,55 @@
 
                 <!--Contents-->
                 <section id="contents" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md hidden sm:hidden md:hidden lg:block">
-                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-[#0B735F] flex items-center">Contents</h3>
-                        <ol class="list-decimal text-[#0B735F] pl-4 sm:pl-6 space-y-2 text-sm sm:text-base">
-                            <li><a href="#redundancy" class="text-[#0B735F] hover:underline">Redundancy and Diversity</a></li>
-                            <li><a href="#process" class="text-[#0B735F] hover:underline">Dependable Process</a></li>
-                            <li><a href="#architecture" class="text-[#0B735F] hover:underline">Dependable System Architectures</a></li>
-                            <li><a href="#programming" class="text-[#0B735F] hover:underline">Dependable Programming</a></li>
+                    <div class="layout hidden sm:hidden md:hidden lg:block">
+                        <h3 class = "title">Contents</h3>
+                        <ol class = "ordered-l">
+                            <li><a href="#redundancy" class="contents">Redundancy and Diversity</a></li>
+                            <li><a href="#process" class="contents">Dependable Process</a></li>
+                            <li><a href="#architecture" class="contents">Dependable System Architectures</a></li>
+                            <li><a href="#programming" class="contents">Dependable Programming</a></li>
                         </ol>
                     </div>
                 </section>
 
                 <!--Intro-->
                 <section id="introduction" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-[#0B735F]">Introduction</h3>
-                        <p class="mb-4 text-sm sm:text-base">The use of software engineering techniques, better programming languages, and better quality management has led to significant improvements in dependability for most software. Nevertheless, system failures may still occur that affect the system's availability or lead to incorrect results being produced.</p>
+                    <div class="layout">
+                        <h3 class = "title">Introduction</h3>
+                        <p class = "paragraph">The use of software engineering techniques, better programming languages, and better quality management has led to significant improvements in dependability for most software. Nevertheless, system failures may still occur that affect the system's availability or lead to incorrect results being produced.</p>
                         
-                        <div class="bg-[#0B735F]/10 p-3 sm:p-4 rounded-lg my-4">
-                            <h4 class="font-bold text-[#0B735F] mb-2 text-sm sm:text-base">Key Terms</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
-                                <div class="bg-white p-2 sm:p-3 rounded shadow-sm">
-                                    <span class="font-medium text-[#0B735F] text-sm sm:text-base">Critical Systems</span>
-                                    <p class="text-xs sm:text-sm">Systems where failure can lead to significant losses</p>
+                        <div class="key-terms-bg">
+                            <h4 class="h4-key-terms">Key Terms</h4>
+                            <div class="grid-key-terms">
+                                <div class="key-terms-bg1">
+                                    <span class="key-terms">Critical Systems</span>
+                                    <p class="key-terms-description">Systems where failure can lead to significant losses</p>
                                 </div>
-                                <div class="bg-white p-2 sm:p-3 rounded shadow-sm">
-                                    <span class="font-medium text-[#0B735F] text-sm sm:text-base">Fault Avoidance</span>
-                                    <p class="text-xs sm:text-sm">Minimizing faults during development</p>
+                                <div class="key-terms-bg1">
+                                    <span class="key-terms">Fault Avoidance</span>
+                                    <p class="key-terms-description">Minimizing faults during development</p>
                                 </div>
-                                <div class="bg-white p-2 sm:p-3 rounded shadow-sm">
-                                    <span class="font-medium text-[#0B735F] text-sm sm:text-base">Fault Tolerance</span>
-                                    <p class="text-xs sm:text-sm">System's ability to continue operating despite faults</p>
+                                <div class="key-terms-bg1">
+                                    <span class="key-terms">Fault Tolerance</span>
+                                    <p class="key-terms-description">System's ability to continue operating despite faults</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="text-[#0B735F] font-semibold mb-3 text-sm sm:text-base">Approaches to Dependable Software</h4>
+                            <h4 class="approaches">Approaches to Dependable Software</h4>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                                <div class="border border-gray-200 rounded-lg p-3 sm:p-4 text-center transition duration-300 hover:bg-[#0B735F]/10">
-                                    <h5 class="font-bold mb-2 text-[#0B735F] text-sm sm:text-base">Fault Avoidance</h5>
-                                    <p class="text-xs sm:text-sm">Using development approaches that help avoid errors</p>
+                                <div class="h5border">
+                                    <h5 class="h5-key-terms">Fault Avoidance</h5>
+                                    <p class="h5d-key-terms">Using development approaches that help avoid errors</p>
                                 </div>
-                                <div class="border border-gray-200 rounded-lg p-3 sm:p-4 text-center transition duration-300 hover:bg-[#0B735F]/10">
-                                    <h5 class="font-bold mb-2 text-[#0B735F] text-sm sm:text-base">Fault Detection</h5>
-                                    <p class="text-xs sm:text-sm">Discovering and removing faults before deployment</p>
+                                <div class="h5border">
+                                    <h5 class="h5-key-terms">Fault Detection</h5>
+                                    <p class="h5d-key-terms">Discovering and removing faults before deployment</p>
                                 </div>
-                                <div class="border border-gray-200 rounded-lg p-3 sm:p-4 text-center transition duration-300 hover:bg-[#0B735F]/10">
-                                    <h5 class="font-bold mb-2 text-[#0B735F] text-sm sm:text-base">Fault Tolerance</h5>
-                                    <p class="text-xs sm:text-sm">Managing faults at runtime to prevent failure</p>
+                                <div class="h5border">
+                                    <h5 class="h5-key-terms">Fault Tolerance</h5>
+                                    <p class="h5d-key-terms">Managing faults at runtime to prevent failure</p>
                                 </div>
                             </div>
                         </div>
@@ -115,175 +106,175 @@
 
                 <!--1. Redundancy and Diversity-->
                 <section id="redundancy" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-[#0B735F] flex items-center">1. Redundancy and Diversity</h3>
-                        <p class="mb-4 text-sm sm:text-base">Redundancy and diversity are fundamental strategies for enhancing the dependability of any type of system.</p>
+                    <div class="layout">
+                        <h3 class = "title">1. Redundancy and Diversity</h3>
+                        <p class = "paragraph">Redundancy and diversity are fundamental strategies for enhancing the dependability of any type of system.</p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 my-4 sm:my-6">
-                            <div class="border border-[#0B735F]/30 rounded-lg p-3 sm:p-4 bg-[#0B735F]/10 transition duration-300">
-                                <h4 class="font-bold text-[#0B735F] mb-2 flex items-center text-sm sm:text-base">Redundancy</h4>
+                            <div class="rd-border1">
+                                <h4 class = "s-title">Redundancy</h4>
                                 <p class="text-sm sm:text-base">Spare capacity included in a system that can be used if part of that system fails.</p>
                                 <div class="mt-3">
                                     <span class="text-xs sm:text-sm font-medium">Example:</span>
                                     <p class="text-xs sm:text-sm">Keeping spare light bulbs at home for when one fails.</p>
                                 </div>
                             </div>
-                            <div class="border border-[#0B735F]/30 rounded-lg p-3 sm:p-4 bg-[#0B735F]/10 transition duration-300">
-                                <h4 class="font-bold text-[#0B735F] mb-2 flex items-center text-sm sm:text-base">Diversity</h4>
-                                <p class="text-sm sm:text-base">Redundant components of the system are of different types, increasing the chances they won't fail in the same way.</p>
+                            <div class="rd-border1">
+                                <h4 class = "s-title">Diversity</h4>
+                                <p class="rd-text">Redundant components of the system are of different types, increasing the chances they won't fail in the same way.</p>
                                 <div class="mt-3">
-                                    <span class="text-xs sm:text-sm font-medium">Example:</span>
-                                    <p class="text-xs sm:text-sm">Using different types of locks on a door for security.</p>
+                                    <span class="rd-example">Example:</span>
+                                    <p class="rd-text">Using different types of locks on a door for security.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="text-[#0B735F] font-semibold mb-3 text-sm sm:text-base">Real-World Applications</h4>
+                            <h4 class="s-title">Real-World Applications</h4>
                             <div class="space-y-3 sm:space-y-4">
-                                <div class="border border-[#0B735F]/30 rounded-lg p-3 sm:p-4 bg-[#0B735F]/10 transition duration-300 hover:bg-[#0B735F]/10">
+                                <div class="rd-border2">
                                     <div>
-                                        <h5 class="text-[#0B735F] font-medium text-sm sm:text-base">Server Redundancy</h5>
-                                        <p class="text-xs sm:text-sm">Systems with high availability requirements use redundant servers that automatically take over if a primary server fails.</p>
+                                        <h5 class="rd-h5">Server Redundancy</h5>
+                                        <p class="rd-text">Systems with high availability requirements use redundant servers that automatically take over if a primary server fails.</p>
                                     </div>
                                 </div>
-                                <div class="border border-[#0B735F]/30 rounded-lg p-3 sm:p-4 bg-[#0B735F]/10 transition duration-300 hover:bg-[#0B735F]/10">
+                                <div class="rd-border2">
                                     <div>
-                                        <h5 class="text-[#0B735F] font-medium text-sm sm:text-base">Aircraft Systems</h5>
-                                        <p class="text-xs sm:text-sm">The Airbus 340 flight control system uses both hardware and software diversity with redundant components.</p>
+                                        <h5 class="rd-h5">Aircraft Systems</h5>
+                                        <p class="rd-text">The Airbus 340 flight control system uses both hardware and software diversity with redundant components.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-yellow-50 border border-[#E3DBA9] rounded-lg p-3 sm:p-4 my-4 transition duration-300 hover:bg-[#E3DBA9]">
-                            <h4 class="font-bold text-[#0B735F] mb-2 flex items-center text-sm sm:text-base"> Important Consideration</h4>
-                            <p class="text-sm sm:text-base">While redundancy and diversity improve dependability, they also increase system complexity. This can make systems harder to understand and verify, potentially introducing new sources of errors.</p>
+                        <div class="rd-border3">
+                            <h5 class="rd-h5 font-bold"> Important Consideration</h5>
+                            <p class="rd-text">While redundancy and diversity improve dependability, they also increase system complexity. This can make systems harder to understand and verify, potentially introducing new sources of errors.</p>
                         </div>
                     </div>
                 </section>
 
                 <!--2. Dependable Process-->
                 <section id="process" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-[#0B735F] flex items-center">2. Dependable Process</h3>
-                        <p class="mb-4 text-sm sm:text-base">Dependable software processes are designed to produce dependable software. A company using a dependable process can be sure that the process has been properly enacted and documented.</p>
+                    <div class="layout">
+                        <h3 class = "title">2. Dependable Process</h3>
+                        <p class="paragraph">Dependable software processes are designed to produce dependable software. A company using a dependable process can be sure that the process has been properly enacted and documented.</p>
 
                         <div class="my-4 sm:my-6">
-                            <h4 class="text-[#0B735F] font-semibold mb-3 text-sm sm:text-base">Characteristics of Dependable Processes</h4>
-                                <div class="bg-[#0B735F]/10 rounded-lg p-3 sm:p-4 border border-[#0B735F]/30">
+                            <h4 class="dp-h4">Characteristics of Dependable Processes</h4>
+                                <div class="dp-bg">
                                     <div class="space-y-3 sm:space-y-4">
 
-                                        <div class="flex flex-col md:flex-row border-b border-[#0B735F]/30 pb-3">
-                                            <div class="md:w-1/3 font-semibold text-[#0B735F] mb-1 md:mb-0 text-sm sm:text-base">Documentable</div>
-                                            <div class="md:w-2/3 text-gray-700 text-sm sm:text-base">The process should have a defined process model that sets out the activities in the process and the documentation that is to be produced during these activities.</div>
+                                        <div class="dp-table">
+                                            <div class="dpt-title">Documentable</div>
+                                            <div class="dpt-p">The process should have a defined process model that sets out the activities in the process and the documentation that is to be produced during these activities.</div>
                                         </div>
 
-                                        <div class="flex flex-col md:flex-row border-b border-[#0B735F]/30 pb-3">
-                                            <div class="md:w-1/3 font-semibold text-[#0B735F] mb-1 md:mb-0 text-sm sm:text-base">Standardized</div>
-                                            <div class="md:w-2/3 text-gray-700 text-sm sm:text-base">A comprehensive set of software development standards covering software production and documentation should be available.</div>
+                                        <div class="dp-table">
+                                            <div class="dpt-title">Standardized</div>
+                                            <div class="dpt-p">A comprehensive set of software development standards covering software production and documentation should be available.</div>
                                         </div>
 
-                                        <div class="flex flex-col md:flex-row border-b border-[#0B735F]/30 pb-3">
-                                            <div class="md:w-1/3 font-semibold text-[#0B735F] mb-1 md:mb-0 text-sm sm:text-base">Auditable</div>
-                                            <div class="md:w-2/3 text-gray-700 text-sm sm:text-base">The process should be understandable by people apart from process participants, who can check that process standards are being followed and make suggestions for process improvement.</div>
+                                        <div class="dp-table">
+                                            <div class="dpt-title">Auditable</div>
+                                            <div class="dpt-p">The process should be understandable by people apart from process participants, who can check that process standards are being followed and make suggestions for process improvement.</div>
                                         </div>
 
-                                        <div class="flex flex-col md:flex-row border-b border-[#0B735F]/30 pb-3">
-                                            <div class="md:w-1/3 font-semibold text-[#0B735F] mb-1 md:mb-0 text-sm sm:text-base">Diverse</div>
-                                            <div class="md:w-2/3 text-gray-700 text-sm sm:text-base">The process should include redundant and diverse verification and validation activities.</div>
+                                        <div class="dp-table">
+                                            <div class="dpt-title">Diverse</div>
+                                            <div class="dpt-p">The process should include redundant and diverse verification and validation activities.</div>
                                         </div>
 
                                         <div class="flex flex-col md:flex-row">
-                                            <div class="md:w-1/3 font-semibold text-[#0B735F] mb-1 md:mb-0 text-sm sm:text-base">Robust</div>
-                                            <div class="md:w-2/3 text-gray-700 text-sm sm:text-base">The process should be able to recover from failures of individual process activities.</div>
+                                            <div class="dpt-title">Robust</div>
+                                            <div class="dpt-p">The process should be able to recover from failures of individual process activities.</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="font-semibold mb-3 text-[#0B735F] text-sm sm:text-base">Attributes of Dependable Processes</h4>
+                            <h4 class="dptitle-h4">Attributes of Dependable Processes</h4>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 py-1 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-medium text-sm sm:text-base">Explicitly Defined</h5>
-                                    <p class="text-xs sm:text-sm">Has a defined process model with collected data demonstrating all necessary steps were followed.</p>
+                                <div class="dp-border">
+                                    <h5 class="key-terms">Explicitly Defined</h5>
+                                    <p class="key-terms-description">Has a defined process model with collected data demonstrating all necessary steps were followed.</p>
                                 </div>
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 py-1 transition duration-300 hover:bg-green-50 rounded-r">
-                                    <h5 class="font-medium text-sm sm:text-base">Repeatable</h5>
-                                    <p class="text-xs sm:text-sm">Does not rely on individual interpretation; can be repeated across projects with different teams.</p>
+                                <div class="dp-border">
+                                    <h5 class="key-terms">Repeatable</h5>
+                                    <p class="key-terms-description">Does not rely on individual interpretation; can be repeated across projects with different teams.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="font-semibold mb-3 text-[#0B735F] text-sm sm:text-base">Key Activities in Dependable Processes</h4>
+                            <h4 class="dptitle-h4">Key Activities in Dependable Processes</h4>
                             <div class="space-y-2 sm:space-y-3">
-                                <div class="flex items-start p-2 rounded transition duration-300 hover:bg-gray-100">
-                                    <div class="bg-[#0B735F] text-white rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                <div class="dp-list">
+                                    <div class="dpl-bg">
                                         <i class="fas fa-check text-xs"></i>
                                     </div>
-                                    <p class="text-sm sm:text-base">Requirements reviews to check completeness and consistency</p>
+                                    <p class="dpl-text">Requirements reviews to check completeness and consistency</p>
                                 </div>
-                                <div class="flex items-start p-2 rounded transition duration-300 hover:bg-gray-100">
-                                    <div class="bg-[#0B735F] text-white rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                <div class="dp-list">
+                                    <div class="dpl-bg">
                                         <i class="fas fa-check text-xs"></i>
                                     </div>
-                                    <p class="text-sm sm:text-base">Formal specification using mathematical models</p>
+                                    <p class="dpl-text">Formal specification using mathematical models</p>
                                 </div>
-                                <div class="flex items-start p-2 rounded transition duration-300 hover:bg-gray-100">
-                                    <div class="bg-[#0B735F] text-white rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                <div class="dp-list">
+                                    <div class="dpl-bg">
                                         <i class="fas fa-check text-xs"></i>
                                     </div>
-                                    <p class="text-sm sm:text-base">Design and program inspections by different people</p>
+                                    <p class="dpl-text">Design and program inspections by different people</p>
                                 </div>
-                                <div class="flex items-start p-2 rounded transition duration-300 hover:bg-gray-100">
-                                    <div class="bg-[#0B735F] text-white rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                <div class="dp-list">
+                                    <div class="dpl-bg">
                                         <i class="fas fa-check text-xs"></i>
                                     </div>
-                                    <p class="text-sm sm:text-base">Static analysis using automated checks on source code</p>
+                                    <p class="dpl-text">Static analysis using automated checks on source code</p>
                                 </div>
-                                <div class="flex items-start p-2 rounded transition duration-300 hover:bg-gray-100">
-                                    <div class="bg-[#0B735F] text-white rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                                <div class="dp-list">
+                                    <div class="dpl-bg">
                                         <i class="fas fa-check text-xs"></i>
                                     </div>
-                                    <p class="text-sm sm:text-base">Comprehensive test planning and management</p>
+                                    <p class="dpl-text">Comprehensive test planning and management</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="bg-[#0B735F]/10 p-3 sm:p-4 rounded-lg my-4 transition duration-300 hover:bg-[#0B735F]/10">
-                            <h4 class="font-bold text-[#0B735F] mb-2 text-sm sm:text-base">Process Comparison</h4>
-                            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                                <div class="flex-1 bg-white p-2 sm:p-3 rounded shadow-sm transition duration-300 hover:shadow">
-                                    <h5 class="font-medium text-center mb-2 text-sm sm:text-base">Traditional Plan-Based</h5>
-                                    <ul class="text-xs sm:text-sm space-y-1">
-                                        <li class="flex items-start">
+                        <div class="dp-bg2">
+                            <h4 class="dptitle-h4">Process Comparison</h4>
+                            <div class="dp-position">
+                                <div class="dp-bg3">
+                                    <h5 class="key-terms">Traditional Plan-Based</h5>
+                                    <ul class="dp-ul">
+                                        <li class="dp-li">
                                             <i class="fas fa-plus text-green-500 mr-1 mt-0.5 text-xs"></i>
                                             <span>Extensive documentation</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="dp-lit">
                                             <i class="fas fa-plus text-green-500 mr-1 mt-0.5 text-xs"></i>
                                             <span>Formal change management</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="dp-li">
                                             <i class="fas fa-minus text-red-500 mr-1 mt-0.5 text-xs"></i>
                                             <span>Less flexible to changes</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="flex-1 bg-white p-2 sm:p-3 rounded shadow-sm transition duration-300 hover:shadow">
-                                    <h5 class="font-medium text-center mb-2 text-sm sm:text-base">Agile Approaches</h5>
-                                    <ul class="text-xs sm:text-sm space-y-1">
-                                        <li class="flex items-start">
+                                <div class="dp-bg3">
+                                    <h5 class="key-terms">Agile Approaches</h5>
+                                    <ul class="dp-ul">
+                                        <li class="dp-li">
                                             <i class="fas fa-plus text-green-500 mr-1 mt-0.5 text-xs"></i>
                                             <span>Adaptable to changes</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="dp-li">
                                             <i class="fas fa-plus text-green-500 mr-1 mt-0.5 text-xs"></i>
                                             <span>Faster feedback cycles</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="dp-li">
                                             <i class="fas fa-minus text-red-500 mr-1 mt-0.5 text-xs"></i>
                                             <span>Less formal documentation</span>
                                         </li>
@@ -296,39 +287,34 @@
 
                 <!--3. Dependable System Architectures-->
                 <section id="architecture" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-[#0B735F] flex items-center">3. Dependable System Architectures</h3>
-                        <p class="mb-4 text-sm sm:text-base">Dependable systems require architectures designed for fault tolerance, often including redundant components and mechanisms to switch control when failures occur.</p>
+                    <div class="layout">
+                        <h3 class = "title">3. Dependable System Architectures</h3>
+                        <p class = "paragraph">Dependable systems require architectures designed for fault tolerance, often including redundant components and mechanisms to switch control when failures occur.</p>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="font-semibold mb-3 text-[#0B735F] text-sm sm:text-base">Architecture Styles for Dependability</h4>
+                            <h4 class="dptitle-h4">Architecture Styles for Dependability</h4>
                             
                             <div class="space-y-4 sm:space-y-6">
-                                <div class="border border-gray-200 rounded-lg p-3 sm:p-4 transition duration-300 hover:bg-[#0B735F]/10">
-                                    <h5 class="font-bold text-[#0B735F] mb-2 text-sm sm:text-base">Protection Systems</h5>
-                                    <p class="mb-3 text-sm sm:text-base">Specialized systems that monitor another system and take action if problems are detected.</p>
-                                    <div class="bg-gray-100 p-2 sm:p-3 rounded text-xs sm:text-sm transition duration-300 hover:bg-gray-200">
+                                <div class="ds-border1">
+                                    <h4 class="dptitle-h4">Protection Systems</h4>
+                                    <p class="ds-text">Specialized systems that monitor another system and take action if problems are detected.</p>
+                                    <div class="ds-inside">
                                         <span class="font-medium">Example:</span> A train protection system that automatically applies brakes if the train passes a red signal.
                                     </div>
                                 </div>
                                 
-                                <div class="border border-gray-200 rounded-lg p-3 sm:p-4 transition duration-300 hover:bg-green-50">
-                                    <h5 class="font-bold text-[#0B735F] mb-2 text-sm sm:text-base">Self-monitoring Architectures</h5>
-                                    <p class="mb-3 text-sm sm:text-base">Systems designed to monitor their own operation and take action if problems are detected.</p>
-                                    <div class="flex items-center bg-[#0B735F]/10 p-2 sm:p-3 rounded text-xs sm:text-sm transition duration-300 hover:bg-[#0B735F]/10">
-                                        <div class="mr-3 text-[#0B735F]">
-                                            <i class="fas fa-info-circle text-lg sm:text-xl"></i>
-                                        </div>
-                                        <div>
-                                            <span class="font-medium">Key Feature:</span> Computations are carried out on separate channels and compared.
-                                        </div>
+                                <div class="ds-border1">
+                                    <h4 class="dptitle-h4">Self-monitoring Architectures</h4>
+                                    <p class="ds-text">Systems designed to monitor their own operation and take action if problems are detected.</p>
+                                    <div class="ds-inside">
+                                        <span class="font-medium">Key Feature:</span> Computations are carried out on separate channels and compared.
                                     </div>
                                 </div>
                                 
-                                <div class="border border-gray-200 rounded-lg p-3 sm:p-4 transition duration-300 hover:bg-[#E3DBA9]">
-                                    <h5 class="font-bold text-[#0B735F] mb-2 text-sm sm:text-base">N-version Programming</h5>
-                                    <p class="mb-3 text-sm sm:text-base">Multiple versions of software are developed independently from the same specification.</p>
-                                    <div class="bg-green-50 p-2 sm:p-3 rounded text-xs sm:text-sm transition duration-300 hover:bg-green-100">
+                                <div class="ds-border2">
+                                    <h4 class="dptitle-h4">N-version Programming</h4>
+                                    <p class="ds-text">Multiple versions of software are developed independently from the same specification.</p>
+                                    <div class="ds-inside">
                                         <span class="font-medium">Application:</span> Used in railway signaling, aircraft systems, and reactor protection systems.
                                     </div>
                                 </div>
@@ -336,38 +322,38 @@
                         </div>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="font-semibold mb-3 text-[#0B735F] text-sm sm:text-base">Achieving Software Diversity</h4>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
-                                <div class="p-3 sm:p-4 rounded-lg transition duration-300 hover:bg-[#0B735F]/30">
-                                    <h5 class="font-medium mb-2 text-sm sm:text-base">Diversity Policies</h5>
-                                    <ul class="text-xs sm:text-sm space-y-1">
-                                        <li class="flex items-start">
+                            <h4 class="dptitle-h4">Achieving Software Diversity</h4>
+                            <div class="ds-grid">
+                                <div class="ds-tran">
+                                    <h5 class="ds-t">Diversity Policies</h5>
+                                    <ul class="ds-ul">
+                                        <li class="ds-il">
                                             <span>1. Using different design methods</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="ds-il">
                                             <span>2. Implementing in different programming languages</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="ds-il">
                                             <span>3. Using different tools and development environments</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="ds-il">
                                             <span>4. Implementing different algorithms for the same functionality</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="p-3 sm:p-4 rounded-lg transition duration-300 hover:bg-[#E3DBA9]">
-                                    <h5 class="font-medium mb-2 text-sm sm:text-base">Challenges</h5>
-                                    <ul class="text-xs sm:text-sm space-y-1">
-                                        <li class="flex items-start">
+                                <div class="ds-tran2">
+                                    <h5 class="ds-t">Challenges</h5>
+                                    <ul class="ds-ul">
+                                        <li class="ds-il">
                                             <span>1. Common specification errors</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="ds-il">
                                             <span>2. Similar cultural and educational backgrounds</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="ds-il">
                                             <span>3. High development costs</span>
                                         </li>
-                                        <li class="flex items-start">
+                                        <li class="ds-il">
                                             <span>4. Increased system complexity</span>
                                         </li>
                                     </ul>
@@ -379,52 +365,52 @@
 
                 <!--4. Dependable Programming-->
                 <section id="programming" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-[#0B735F] flex items-center">4. Dependable Programming</h3>
-                        <p class="mb-4 text-sm sm:text-base">Good programming practices help reduce faults in delivered systems. These guidelines can be applied regardless of the programming language used.</p>
+                    <div class="layout">
+                        <h3 class = "title">4. Dependable Programming</h3>
+                        <p class = "paragraph">Good programming practices help reduce faults in delivered systems. These guidelines can be applied regardless of the programming language used.</p>
                         
                         <div class="my-4 sm:my-6">
-                            <h4 class="font-semibold text-[#0B735F] mb-4 text-sm sm:text-base">Programming Guidelines for Dependability</h4>
+                            <h4 class="dptitle-h4">Programming Guidelines for Dependability</h4>
                             
-                            <div class="space-y-4 sm:space-y-6">
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Control Information Visibility</h5>
-                                    <p class="mt-1 text-sm sm:text-base">Program components should only access data they need. Implement data structures as abstract data types to hide internal representation.</p>
+                            <div class="dp4-space">
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Control Information Visibility</h5>
+                                    <p class="dp4-p">Program components should only access data they need. Implement data structures as abstract data types to hide internal representation.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Check All Inputs for Validity</h5>
-                                    <p class="mt-1 text-sm sm:text-base">Always validate inputs as soon as they are read. Implement range checks, size checks, representation checks, and reasonableness checks.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Check All Inputs for Validity</h5>
+                                    <p class="dp4-p">Always validate inputs as soon as they are read. Implement range checks, size checks, representation checks, and reasonableness checks.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Provide Handlers for All Exceptions</h5>
-                                    <p class="mt-1 text-sm sm:text-base">Define exception handlers for all possible exceptions. Exception handlers can signal higher-level components, carry out alternative processing, or pass control to runtime systems.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Provide Handlers for All Exceptions</h5>
+                                    <p class="dp4-p">Define exception handlers for all possible exceptions. Exception handlers can signal higher-level components, carry out alternative processing, or pass control to runtime systems.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Limit Use of Problematic Constructs</h5>
-                                    <p class="mt-1 text-sm sm:text-base">Be cautious with pointers, dynamic memory allocation, recursion, interrupts, and other constructs that can introduce vulnerabilities.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Limit Use of Problematic Constructs</h5>
+                                    <p class="dp4-p">Be cautious with pointers, dynamic memory allocation, recursion, interrupts, and other constructs that can introduce vulnerabilities.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Provide Restart Capabilities</h5>
-                                    <p class="mt-1 text-sm sm:text-base">For long transactions or computationally intensive systems, implement checkpointing to save progress and allow restart from the last checkpoint.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Provide Restart Capabilities</h5>
+                                    <p class="dp4-p">For long transactions or computationally intensive systems, implement checkpointing to save progress and allow restart from the last checkpoint.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Check Array Bounds</h5>
-                                    <p class="mt-1 text-sm sm:text-base">Always ensure array indices are within bounds to prevent buffer overflow vulnerabilities.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Check Array Bounds</h5>
+                                    <p class="dp4-p">Always ensure array indices are within bounds to prevent buffer overflow vulnerabilities.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Include Timeouts for External Calls</h5>
-                                    <p class="mt-1 text-sm sm:text-base">When calling external components, implement timeouts to prevent indefinite waiting if the component fails to respond.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Include Timeouts for External Calls</h5>
+                                    <p class="dp4-p">When calling external components, implement timeouts to prevent indefinite waiting if the component fails to respond.</p>
                                 </div>
                                 
-                                <div class="border-l-4 border-[#0B735F] pl-3 sm:pl-4 transition duration-300 hover:bg-[#0B735F]/10 rounded-r">
-                                    <h5 class="font-bold text-[#0B735F] text-sm sm:text-base">Name Constants Representing Real-world Values</h5>
-                                    <p class="mt-1 text-sm sm:text-base">Use named constants instead of literal values to reduce errors and make maintenance easier.</p>
+                                <div class="dp4-border">
+                                    <h5 class="dp4-txt">Name Constants Representing Real-world Values</h5>
+                                    <p class="dp4-p">Use named constants instead of literal values to reduce errors and make maintenance easier.</p>
                                 </div>
                             </div>
                         </div>
@@ -433,49 +419,49 @@
 
                 <!-- Key Points -->
                 <section id="keypoints" class="mb-10 sm:mb-12">
-                    <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 transition duration-300 hover:shadow-md">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-[#0B735F] text-center">KEY POINTS</h3>
+                    <div class="layout">
+                    <h3 class = "title">KEY POINTS</h3>
         
-                    <div class="space-y-4 sm:space-y-6">
+                    <div class="kp-space">
 
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
-                                <span class="font-semibold text-[#0B735F]">Dependability in a program</span> can be achieved by avoiding the introduction of faults, by detecting and removing faults before system deployment, and by including fault-tolerance facilities that allow the system to remain operational after a fault has caused a system failure.
+                        <div class="kp-b">
+                            <p class="kp-t">
+                                <span class="span">Dependability in a program</span> can be achieved by avoiding the introduction of faults, by detecting and removing faults before system deployment, and by including fault-tolerance facilities that allow the system to remain operational after a fault has caused a system failure.
                             </p>
                         </div>
                         
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
-                                The use of <span class="font-semibold text-[#0B735F]">redundancy and diversity</span> in hardware, software processes, and software systems is essential to the development of dependable systems.
+                        <div class="kp-b">
+                            <p class="kp-t">
+                                The use of <span class="span">redundancy and diversity</span> in hardware, software processes, and software systems is essential to the development of dependable systems.
                             </p>
                         </div>
 
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
-                                The use of a <span class="font-semibold text-[#0B735F]">well-defined, repeatable process</span> is essential if faults in a system are to be minimized. The process should include verification and validation activities at all stages, from requirements definition through to system implementation.
+                        <div class="kp-b">
+                            <p class="kp-t">
+                                The use of a <span class="span">well-defined, repeatable process</span> is essential if faults in a system are to be minimized. The process should include verification and validation activities at all stages, from requirements definition through to system implementation.
                             </p>
                         </div>
 
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
-                                <span class="font-semibold text-[#0B735F]">Dependable system architectures</span> are system architectures that are designed for fault tolerance. There are a number of architectural styles that support fault tolerance including protection systems, self-monitoring architectures, and N-version programming.
+                        <div class="kp-b">
+                            <p class="kp-t">
+                                <span class="span">Dependable system architectures</span> are system architectures that are designed for fault tolerance. There are a number of architectural styles that support fault tolerance including protection systems, self-monitoring architectures, and N-version programming.
                             </p>
                         </div>
 
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
-                                <span class="font-semibold text-[#0B735F]">Software diversity is difficult to achieve</span> because it is practically impossible to ensure that each version of the software is truly independent.
+                        <div class="kp-b">
+                            <p class="kp-t">
+                                <span class="span">Software diversity is difficult to achieve</span> because it is practically impossible to ensure that each version of the software is truly independent.
                             </p>
                         </div>
 
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
-                                <span class="font-semibold text-[#0B735F]">Dependable programming</span> relies on the inclusion of redundancy in a program to check the validity of inputs and the values of program variables.
+                        <div class="kp-b">
+                            <p class="kp-t">
+                                <span class="span">Dependable programming</span> relies on the inclusion of redundancy in a program to check the validity of inputs and the values of program variables.
                             </p>
                         </div>
 
-                        <div class="flex items-start p-3 sm:p-4 bg-[#0B735F]/10 rounded-lg">
-                            <p class="text-gray-700 text-sm sm:text-base">
+                        <div class="kp-b">
+                            <p class="kp-t">
                                 Some programming constructs and techniques, such as <span class="font-semibold text-[#0B735F]">go-to statements, pointers, recursion, inheritance, and floating-point numbers</span>, are inherently error prone. You should try to avoid these constructs when developing dependable systems.
                             </p>
                         </div>
@@ -484,19 +470,5 @@
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#0B735F] text-white py-4 sm:py-6 mt-6 sm:mt-8">
-        <div class="container mx-auto px-4">
-            <div class="font-mono flex flex-col sm:flex-row justify-between items-center">
-                <div class="mb-3 sm:mb-0">
-                    <p class="text-base sm:text-lg font-semibold text-center sm:text-left">Chapter 13: Dependability Engineering</p>
-                </div>
-                <div>
-                    <p class="text-sm sm:text-base text-center sm:text-left">Developed by: Cielo Tadas</p>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
