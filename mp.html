@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ...existing code... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css">
+  <title>Software Engineering - Project Management</title>
+
+  <!-- Added: Font Awesome, Tailwind, Google Fonts and heading font mapping (from chapter13.html) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ui-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --heading-font: "Merriweather", Georgia, "Times New Roman", serif;
+    }
+    body, .body { font-family: var(--ui-font); }
+    h1, h2, h3, h4, h5, h6, .h3, .ch3, header h1 { font-family: var(--heading-font); }
+  </style>
+</head>
+
+<body class="body">
+
+  <!-- Inserted fixed site nav + centered page header (local nav remains inside main) -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#384166] border-b border-[#0B735F]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="chapterhub.html" class="text-[#0CDC2A] font-bold text-xl">Software Engineering</a>
+        <div class="hidden md:flex gap-8">
+          <a href="chapterhub.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Home</a>
+          <a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <header class="text-center  bg-white mt-16">
+  
+  </header>
+
+  <main class="main">
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="nav-ul">
+        <li><a href="chapter22.html" class="nav-hover">Introduction</a></li>
+        <li><a href="rm.html" class="nav-hover">2.1</a></li>
+        <li><a href="mp.html" class="nav-hover">2.2</a></li>
+        <li><a href="t.html" class="nav-hover">2.3</a></li>
+      </ul>
+    </nav>
+
+    <!-- Chapter Header -->
+    <section class="chapter text-center mb-10">
+      <h1 class="title text-7xl md:text-[7.5rem] font-extrabold leading-tight"
+          style="display:block; margin:0 auto; text-align:center; float:none !important;">
+        22
+      </h1>
+      <hr class="hr">
+      <h2 class="h2">Project Management</h2>
+    </section>
+
+    <!-- Objectives -->
+    <article class="format-article">
+      <h3 class="h3">Objectives</h3>
+      <p class="mb-3">The objective of this chapter is to introduce software project management and two important management activities, namely risk management and people management. When you have read the chapter you will:</p>
+      <ul class="ul">
+        <li>Know the principal tasks of software project managers;</li>
+        <li>Understand the notion of risk management and some of the risks that can arise in software projects;</li>
+        <li>Understand factors that influence personal motivation and what these might mean for software project managers;</li>
+        <li>Understand key issues that influence team working, such as team composition, organization, and communication.</li>
+      </ul>
+    </article>
+
+    <!-- Contents -->
+    <article class="format-article">
+      <h3 class="h3">Contents</h3>
+      <p><b>22.1</b> Risk management</p>
+      <p><b>22.2</b> Managing people</p>
+      <p><b>22.3</b> Teamwork</p>
+    </article>
+
+    <!-- 22.2 Managing People -->
+    <section>
+      <article class="mb-6">
+        <h3 class= text-2xl>22.2 Managing People</h3>
+      </article>
+
+      <article class="article">
+        <p>
+          The people working in a software organization are its greatest assets. It costs a lot to recruit and retain good people and it is up to software managers to ensure that the organization gets the best possible return on its investment. In successful companies, this is achieved when people are respected by the organization and are assigned responsibilities that reflect their skills and experience.
+        </p>
+        <p>
+          Software project managers must understand both the technical and human aspects of development. However, technical expertise doesn’t always translate into strong people management skills. Engineers may lack the soft skills required to motivate and lead a project team. As a project manager, developing people management skills is crucial.
+        </p>
+
+        <p>Four critical factors in people management are:</p>
+        <ol class="ol">
+          <li><b>Consistency:</b> Team members should be treated fairly and consistently so that no one feels undervalued.</li>
+          <li><b>Respect:</b> Recognize different skills and give everyone an opportunity to contribute meaningfully.</li>
+          <li><b>Inclusion:</b> Encourage open communication and listen to all ideas, regardless of seniority.</li>
+          <li><b>Honesty:</b> Be transparent about project progress and your own knowledge. Admitting limitations builds trust.</li>
+        </ol>
+
+        <p>
+          People management is best learned through experience. This section, and the following one on teamwork, highlight common challenges and principles for managing technical teams effectively.
+        </p>
+      </article>
+
+      <!-- 22.2.1 Motivating People -->
+      <article class="article">
+        <h3 class="sch3">22.2.1 Motivating People</h3>
+        <hr class="border-gray-300">
+        <p>
+          Motivation is key to ensuring that team members perform to the best of their abilities. It involves creating an environment that encourages people to contribute effectively. Demotivated employees may work slowly, make errors, and disengage from team goals.
+        </p>
+
+        <p>
+          Maslow (1954) proposed that human motivation follows a hierarchy of needs — from basic survival needs to higher psychological and self-fulfillment needs.
+        </p>
+
+        <div class="text-center">
+          <img src="assets/figure-22.7.png" alt="Human needs hierarchy" class="figure-image">
+          <p class="text-sm text-gray-600"><b>Figure 22.7</b> Human needs hierarchy</p>
+        </div>
+
+        <p>
+          In a software organization, employees’ higher-level needs — social belonging, esteem, and self-realization — are most relevant. Managers can support these needs by:
+        </p>
+
+        <ol class="ol">
+          <li><b>Social needs:</b> Encourage team bonding and collaboration through regular interaction, even in remote settings.</li>
+          <li><b>Esteem needs:</b> Recognize achievements publicly and ensure fair compensation.</li>
+          <li><b>Self-realization needs:</b> Provide autonomy, challenging tasks, and training for skill development.</li>
+        </ol>
+
+        <p>
+          Motivation problems can arise when team members face personal difficulties or when projects shift away from their interests. Managers should offer support but also ensure responsibilities are met. Sometimes, reframing tasks as opportunities for growth or providing new challenges can restore motivation.
+        </p>
+
+        <p>
+          Maslow’s model focuses on individual needs, but people also find motivation in shared goals and teamwork. Belonging to a cohesive, purpose-driven group is a strong motivator.
+        </p>
+      </article>
+
+      <!-- Personality and Motivation -->
+      <article class="article">
+        <h3 class="sch3">Personality and Motivation</h3>
+        <hr class="border-gray-300">
+        <p>
+          Personality types also affect motivation. Bass and Dunteman (1963) identified three main categories:
+        </p>
+        <ol class="ol">
+          <li><b>Task-oriented people:</b> Motivated by the intellectual challenge of the work itself.</li>
+          <li><b>Self-oriented people:</b> Motivated by personal success and recognition; they see work as a means to achieve goals.</li>
+          <li><b>Interaction-oriented people:</b> Motivated by collaboration and communication with others.</li>
+        </ol>
+
+        <p>
+          Interaction-oriented people thrive in teams, while task- and self-oriented individuals may prefer independent work. The right mix of personalities contributes to a balanced and effective development team.
+        </p>
+
+        <p>
+          Motivation can shift over time — self-oriented individuals may become more collaborative when they find fulfillment in team success, and vice versa.
+        </p>
+      </article>
+
+      <!-- Navigation Buttons -->
+      <nav class="flex justify-between mt-8">
+        <a href="rm.html" class="previousbtn">← Previous</a>
+        <a href="t.html" class="nextbtn">Next →</a>
+      </nav>
+    </section>
+
+  </main>
+
+  <!-- Inserted footer (from chapter13.html) -->
+  <footer class="bg-[#384166] border-t border-[#0B735F] mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-[#0CDC2A] font-bold text-lg mb-2">Software Engineering</h3>
+          <p class="text-[#E3DBA9] text-sm">Software Engineering by Ian Sommerville is a comprehensive textbook that explains the principles, methods, and best practices for designing, developing, and maintaining high-quality software systems.</p>
+        </div>
+
+        <div>
+          <!-- Follow Us / placeholder (social links removed) -->
+        </div>
+
+        <div>
+          <h4 class="text-[#E3DBA9] font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">About The Book</a></li>
+            <li><a href="chapter.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Chapters</a></li>
+            <li><a href="members.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Members</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#0B735F] pt-8">
+        <p class="text-center text-[#E3DBA9] text-sm">© 2025 Book Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

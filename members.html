@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Members</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	
+	<!-- Google Fonts and CSS Variables -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+	<style>
+	  :root{
+	    --ui-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	    --heading-font: "Merriweather", Georgia, "Times New Roman", serif;
+	  }
+	  body { font-family: var(--ui-font); }
+	  h1,h2,h3 { font-family: var(--heading-font); }
+	</style>
+</head>
+<body class="bg-gray-50 pt-16 min-h-screen flex flex-col">
+
+	<!-- restored Chapter Hub navigation (Software Engineering) - fixed -->
+	<nav class="fixed top-0 left-0 right-0 z-50 bg-[#384166] border-b border-[#0B735F]">
+	  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between items-center h-16">
+		  <a href="chapterhub.html" class="text-[#0CDC2A] font-bold text-xl">Software Engineering</a>
+		  <div class="hidden md:flex gap-8">
+			<a href="chapterhub.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Home</a>
+			<a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About</a>
+		  </div>
+		</div>
+	  </div>
+	</nav>
+	
+	<!-- Page header: centered Members title -->
+	<header class="text-center py-8 px-4 bg-white">
+	  <h1 class="text-3xl md:text-4xl font-bold text-[#384166] mb-2">Members</h1>
+	</header>
+	<main class="flex-1">
+		
+		<div class="max-w-7xl mx-auto p-6">
+			<!-- Back button row, top left of main content -->
+			<div class="flex justify-between items-center mb-8">
+				<a href="chapterhub.html" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#384166] text-[#0CDC2A] font-semibold hover:bg-[#2c3250] transition-colors duration-300 text-sm shadow hover:shadow-md">
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+					</svg>
+					Back
+				</a>
+				<!-- You can add other content to the right if needed -->
+			</div>
+			
+			<!-- Leader on top, 3 members below -->
+			<div class="grid grid-cols-1 gap-6">
+				<!-- Leader card (single, centered) -->
+				 
+				<div class="rounded-lg shadow p-5 flex flex-col items-center bg-gradient-to-r from-emerald-50 via-emerald-100 to-white border-l-8 border-emerald-400 hover:shadow-lg hover:-translate-y-0.5 transform transition duration-200 mx-auto w-72">
+					<div class="w-36 h-36 rounded-full overflow-hidden bg-gray-100 mb-4">
+						<img src="assets/igop.jpg" alt="Leader" class="w-full h-full object-cover">
+					</div>
+
+					<h3 id="name-leader" class="w-full text-center text-2xl font-semibold mb-2 tracking-wide text-gray-900" style="font-family: var(--heading-font);">Charlie Villacoba</h3>
+
+					<div class="text-sm text-gray-700 mb-3">Age: <span id="age-leader" class="font-medium">22</span></div>
+					<textarea id="motto-leader" class="w-full text-center text-base italic text-gray-700 mt-4 resize-none border-t pt-4 focus:outline-none bg-gradient-to-r from-white to-gray-50 px-4 rounded-md" rows="2" placeholder="Motto">"Do it scared."</textarea>
+				</div>
+
+				<!-- 3-member grid -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Member 1 -->
+					<div class="rounded-lg shadow p-5 flex flex-col items-center bg-gradient-to-r from-teal-50 via-teal-100 to-white border-l-8 border-teal-400 hover:shadow-lg hover:-translate-y-0.5 transform transition duration-200">
+						<div class="w-36 h-36 rounded-full overflow-hidden bg-gray-100 mb-4">
+							<img src="assets/roi.png" alt="Member 1" class="w-full h-full object-cover">
+						</div>
+
+						<h4 id="name-1" class="w-full text-center text-lg font-semibold mb-1 text-gray-800" style="font-family: var(--heading-font);">Roi C. Rendal</h4>
+
+						<div class="text-sm text-gray-700 mb-2">Age: <span id="age-1" class="font-medium">20</span></div>
+						<textarea id="motto-1" class="w-full text-center text-sm italic text-gray-600 mt-3 resize-none border-t pt-3 focus:outline-none bg-gray-50 px-3 rounded-md" rows="2" placeholder="Motto">"When they say you can't, it's their limits, not yours."</textarea>
+					</div>
+
+					<!-- Member 2 -->
+					<div class="rounded-lg shadow p-5 flex flex-col items-center bg-gradient-to-r from-purple-50 via-purple-100 to-white border-l-8 border-purple-400 hover:shadow-lg hover:-translate-y-0.5 transform transition duration-200">
+						<div class="w-36 h-36 rounded-full overflow-hidden bg-gray-100 mb-4">
+							<img src="assets/cielo.jpg" alt="Member 2" class="w-full h-full object-cover">
+						</div>
+
+						<h4 id="name-2" class="w-full text-center text-lg font-semibold mb-1 text-gray-800" style="font-family: var(--heading-font);">Cielo A. Tadas</h4>
+
+						<div class="text-sm text-gray-700 mb-2">Age: <span id="age-2" class="font-medium">20</span></div>
+						<textarea id="motto-2" class="w-full text-center text-sm italic text-gray-600 mt-3 resize-none border-t pt-3 focus:outline-none bg-gray-50 px-3 rounded-md" rows="2" placeholder="Motto">"per aspera, ad astra."
+</textarea>
+					</div>
+
+					<!-- Member 3 -->
+					<div class="rounded-lg shadow p-5 flex flex-col items-center bg-gradient-to-r from-indigo-50 via-indigo-100 to-white border-l-8 border-indigo-400 hover:shadow-lg hover:-translate-y-0.5 transform transition duration-200">
+						<div class="w-36 h-36 rounded-full overflow-hidden bg-gray-100 mb-4">
+							<img src="assets/363900885_1713685875739747_1578163740635687779_n.jpg" alt="Member 3" class="w-full h-full object-cover">
+						</div>
+
+						<h4 id="name-3" class="w-full text-center text-lg font-semibold mb-1 text-gray-800" style="font-family: var(--heading-font);">Trishia Mae F. Piliin</h4>
+
+						<div class="text-sm text-gray-700 mb-2">Age: <span id="age-3" class="font-medium">21</span></div>
+						<textarea id="motto-3" class="w-full text-center text-sm italic text-gray-600 mt-3 resize-none border-t pt-3 focus:outline-none bg-gray-50 px-3 rounded-md" rows="2" placeholder="Motto">"Very demure, very mindful"</textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Footer copied from Chapter1.html -->
+	<footer class="bg-[#384166] border-t border-[#0B735F] mt-8">
+	  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+		  <div>
+			<h3 class="text-[#0CDC2A] font-bold text-lg mb-2">Software Engineering</h3>
+			<p class="text-[#E3DBA9] text-sm">Software Engineering by Ian Sommerville is a comprehensive textbook that explains the principles, methods, and best practices for designing, developing, and maintaining high-quality software systems.</p>
+		  </div>
+	
+		  <div>
+			<!-- Follow Us / placeholder (social links removed) -->
+		  </div>
+	
+		  <div>
+			<h4 class="text-[#E3DBA9] font-semibold mb-4">Quick Links</h4>
+			<ul class="space-y-2 text-sm">
+			  <li><a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">About The Book</a></li>
+			  <li><a href="chapter.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Chapters</a></li>
+			  <li><a href="members.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Members</a></li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</footer>
+
+</body>
+</html>

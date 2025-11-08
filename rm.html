@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ...existing code... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css">
+  <title>Software Engineering - Project Management</title>
+
+  <!-- Added: Font Awesome, Tailwind, Google Fonts and heading font mapping (from chapter13.html) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ui-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --heading-font: "Merriweather", Georgia, "Times New Roman", serif;
+    }
+    body, .body { font-family: var(--ui-font); }
+    h1, h2, h3, h4, h5, h6, .h3, .ch3, header h1 { font-family: var(--heading-font); }
+  </style>
+</head>
+
+<body class="body">
+
+  <!-- Inserted fixed site nav + centered page header (local navbar inside main stays) -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#384166] border-b border-[#0B735F]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="chapterhub.html" class="text-[#0CDC2A] font-bold text-xl">Software Engineering</a>
+        <div class="hidden md:flex gap-8">
+          <a href="chapterhub.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Home</a>
+          <a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-center  bg-white mt-16">
+  </header>
+
+  <main class="main">
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="nav-ul">
+        <li><a href="chapter22.html" class="nav-hover">Introduction</a></li>
+        <li><a href="rm.html" class="nav-hover">2.1</a></li>
+        <li><a href="mp.html" class="nav-hover">2.2</a></li>
+        <li><a href="t.html" class="nav-hover">2.3</a></li>
+      </ul>
+    </nav>
+
+    <!-- Chapter Header -->
+    <section class="chapter text-center mb-10">
+      <h1 class="title text-7xl md:text-[7.5rem] font-extrabold leading-tight"
+          style="display:block; margin:0 auto; text-align:center; float:none !important;">
+        22
+      </h1>
+      <hr class="hr">
+      <h2 class="h2">Project Management</h2>
+    </section>
+
+    <!-- Objectives -->
+    <article class="format-article">
+      <h3 class="h3">Objectives</h3>
+      <p class="mb-3">The objective of this chapter is to introduce software project management and two important management activities, namely risk management and people management. When you have read the chapter you will:</p>
+      <ul class="ul">
+        <li>Know the principal tasks of software project managers;</li>
+        <li>Understand the notion of risk management and some of the risks that can arise in software projects;</li>
+        <li>Understand factors that influence personal motivation and what these might mean for software project managers;</li>
+        <li>Understand key issues that influence team working, such as team composition, organization, and communication.</li>
+      </ul>
+    </article>
+
+    <!-- Contents -->
+    <article class="format-article">
+      <h3 class="h3">Contents</h3>
+      <p><b>22.1</b> Risk management</p>
+      <p><b>22.2</b> Managing people</p>
+      <p><b>22.3</b> Teamwork</p>
+    </article>
+
+    <!-- Section 22.1 Risk Management -->
+    <section>
+      <article class="mb-6" text-lg bold">
+        <h3 class="text-2xl">22.1 Risk Management</h3>
+      </article>
+
+      <article class="article">
+        <p>Risk management is one of the most important jobs for a project manager. It involves anticipating risks that might affect the project schedule or software quality, and taking action to avoid them. There are three main categories of risk:</p>
+
+        <ol class="ol">
+          <li><p class="font-semibold">Project risks</p> Affect the project schedule or resources (e.g., loss of an experienced designer).</li>
+          <li><p class="font-semibold">Product risks</p> Affect the quality or performance of the software (e.g., component failure).</li>
+          <li><p class="font-semibold">Business risks</p> Affect the organization (e.g., competition introducing a new product).</li>
+        </ol>
+
+        <p>These risks often overlap. Losing a key developer can delay a project, reduce product quality, and hurt the business. Documenting risks and their consequences in a project plan helps minimize delays and budget problems.</p>
+
+        <p>Common software risks include poorly defined requirements, resource estimation errors, or changing technologies. Because of these uncertainties, risk management is essential for project success.</p>
+
+        <p>Risk management typically includes four stages:</p>
+        <ol class="ol">
+          <li><b>Risk identification:</b> Identify possible project, product, and business risks.</li>
+          <li><b>Risk analysis:</b> Assess the likelihood and consequences of these risks.</li>
+          <li><b>Risk planning:</b> Develop strategies to avoid or minimize risks.</li>
+          <li><b>Risk monitoring:</b> Regularly assess risks and update mitigation plans.</li>
+        </ol>
+
+        <p>This process is iterative and continues throughout the project.</p>
+      </article>
+
+      <!-- 22.1.1 Risk Identification -->
+      <article class="article">
+        <h3 class="sch3">22.1.1 Risk Identification</h3>
+        <hr class="border-gray-300">
+        <p>Risk identification involves determining risks that may affect the project, product, or organization. It can be done through brainstorming or by drawing on the project manager’s experience. Common risk categories include:</p>
+        <ul class="ul">
+          <li><b>Technology risks:</b> Related to software or hardware technologies used.</li>
+          <li><b>People risks:</b> Related to team skills or staffing.</li>
+          <li><b>Organizational risks:</b> Related to company structure or policy.</li>
+          <li><b>Tools risks:</b> Related to the development tools used.</li>
+          <li><b>Requirements risks:</b> Related to changing customer needs.</li>
+          <li><b>Estimation risks:</b> Related to inaccurate time or resource estimates.</li>
+        </ul>
+      </article>
+
+      <!-- 22.1.2 Risk Analysis -->
+      <article class="article">
+        <h3 class="sch3">22.1.2 Risk Analysis</h3>
+        <hr class="border-gray-300">
+        <p>Risk analysis involves assessing the probability and seriousness of each identified risk. Probabilities may be categorized as very low, low, moderate, high, or very high, while effects may be catastrophic, serious, tolerable, or insignificant.</p>
+        <p>Risks are ranked according to their severity and likelihood. This helps determine which risks require the most attention. Risk assessments should be updated as the project progresses and new information becomes available.</p>
+      </article>
+
+      <!-- 22.1.3 Risk Planning -->
+      <article class="article">
+        <h3 class="sch3">22.1.3 Risk Planning</h3>
+        <hr class="border-gray-300">
+        <p>Risk planning involves developing strategies to manage identified risks. Plans should outline preventive actions and information to monitor.</p>
+
+        <p>Common risk management strategies include:</p>
+        <ol class="ol">
+          <li><b>Avoidance strategies:</b> Reduce the probability that a risk will occur.</li>
+          <li><b>Minimization strategies:</b> Reduce the impact if the risk occurs.</li>
+          <li><b>Contingency plans:</b> Prepare for the worst-case scenario.</li>
+        </ol>
+
+        <p>These approaches mirror critical system strategies: avoid, tolerate, or recover from failures.</p>
+      </article>
+
+      <!-- 22.1.4 Risk Monitoring -->
+      <article class="bg-white p-6 rounded-2xl shadow space-y-4">
+        <h3 class="sch3">22.1.4 Risk Monitoring</h3>
+        <hr class="border-gray-300">
+        <p>Risk monitoring ensures that assumptions about project risks remain valid. Each risk should be reviewed regularly to determine if its likelihood or consequences have changed. Indicators such as the number of change requests or delays can signal evolving risks.</p>
+        <p>At every management review, discuss key risks to determine whether their probability or seriousness has increased or decreased.</p>
+      </article>
+
+      <!-- Navigation Buttons -->
+      <nav class="flex justify-between mt-8">
+        <a href="chapter22.html" class="previousbtn">← Previous</a>
+        <a href="mp.html" class="nextbtn">Next →</a>
+      </nav>
+
+    </section>
+
+  </main>
+
+  <!-- Inserted footer (from chapter13.html) -->
+  <footer class="bg-[#384166] border-t border-[#0B735F] mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-[#0CDC2A] font-bold text-lg mb-2">Software Engineering</h3>
+          <p class="text-[#E3DBA9] text-sm">Software Engineering by Ian Sommerville is a comprehensive textbook that explains the principles, methods, and best practices for designing, developing, and maintaining high-quality software systems.</p>
+        </div>
+
+        <div>
+          <!-- Follow Us / placeholder (social links removed) -->
+        </div>
+
+        <div>
+          <h4 class="text-[#E3DBA9] font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">About The Book</a></li>
+            <li><a href="chapter.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Chapters</a></li>
+            <li><a href="members.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Members</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#0B735F] pt-8">
+        <p class="text-center text-[#E3DBA9] text-sm">© 2025 Book Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

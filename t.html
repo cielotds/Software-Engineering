@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ...existing code... -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css">
+  <title>Software Engineering - Project Management</title>
+
+  <!-- Added: Font Awesome, Tailwind, Google Fonts and heading font mapping (from chapter13.html) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ui-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --heading-font: "Merriweather", Georgia, "Times New Roman", serif;
+    }
+    body, .body { font-family: var(--ui-font); }
+    h1, h2, h3, h4, h5, h6, .h3, .ch3, header h1 { font-family: var(--heading-font); }
+  </style>
+</head>
+
+<body class="body">
+
+  <!-- Inserted fixed site nav + centered page header (local navbar inside main stays) -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#384166] border-b border-[#0B735F]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="chapterhub.html" class="text-[#0CDC2A] font-bold text-xl">Software Engineering</a>
+        <div class="hidden md:flex gap-8">
+          <a href="chapterhub.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Home</a>
+          <a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <header class="text-center  bg-white mt-16">
+  </header>
+
+  <main class="main">
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="nav-ul">
+        <li><a href="chapter22.html" class="nav-hover">Introduction</a></li>
+        <li><a href="rm.html" class="nav-hover">2.1</a></li>
+        <li><a href="mp.html" class="nav-hover">2.2</a></li>
+        <li><a href="t.html" class="nav-hover">2.3</a></li>
+      </ul>
+    </nav>
+
+    <!-- Chapter Header -->
+    <section class="chapter text-center mb-10">
+      <h1 class="title text-7xl md:text-[7.5rem] font-extrabold leading-tight"
+          style="display:block; margin:0 auto; text-align:center; float:none !important;">
+        22
+      </h1>
+      <hr class="hr">
+      <h2 class="h2">Project Management</h2>
+    </section>
+
+    <!-- Objectives -->
+    <article class="format-article">
+      <h3 class="h3">Objectives</h3>
+      <p class="mb-3">The objective of this chapter is to introduce software project management and two important management activities, namely risk management and people management. When you have read the chapter you will:</p>
+      <ul class="ul">
+        <li>Know the principal tasks of software project managers;</li>
+        <li>Understand the notion of risk management and some of the risks that can arise in software projects;</li>
+        <li>Understand factors that influence personal motivation and what these might mean for software project managers;</li>
+        <li>Understand key issues that influence team working, such as team composition, organization, and communication.</li>
+      </ul>
+    </article>
+
+    <!-- Contents -->
+    <article class="format-article">
+      <h3 class="h3">Contents</h3>
+      <p><b>22.1</b> Risk management</p>
+      <p><b>22.2</b> Managing people</p>
+      <p><b>22.3</b> Teamwork</p>
+    </article>
+
+    <!-- 22.3 Teamwork -->
+    <section>
+      <article class="mb-6">
+        <h3 class= text-2xl>22.3 Teamwork</h3>
+      </article>
+
+      <!-- Main Text -->
+      <article class="article">
+        <p>Most professional software is developed by project teams that range in size from two to several hundred people. However, as it is clearly impossible for everyone in a large group to work together on a single problem, large teams are usually split into smaller groups responsible for developing parts of the system.</p>
+
+        <p>Putting together a group with the right mix of technical skills, experience, and personalities is a critical management task. A good group is cohesive and has a team spirit. Members are motivated by both group success and personal achievement.</p>
+
+        <ol class="ol">
+          <li><b>The group can establish its own quality standards.</b> Because these standards are agreed upon by consensus, they are more likely to be followed.</li>
+          <li><b>Individuals learn from and support each other.</b> Mutual learning minimizes ignorance and fosters growth.</li>
+          <li><b>Knowledge is shared.</b> Continuity is maintained if a group member leaves.</li>
+          <li><b>Refactoring and continual improvement are encouraged.</b> Members work collectively to deliver high-quality results and fix problems together.</li>
+        </ol>
+
+        <p>Good project managers encourage group cohesiveness by organizing social events, promoting inclusivity, and ensuring open communication. Simple information exchange makes members feel valued and part of a group.</p>
+
+        <p>Whether a group is effective depends on the project, the organization, and three key factors:</p>
+        <ol class="ol">
+          <li><b>The people in the group</b> — A mix of personalities and skills ensures success.</li>
+          <li><b>The group organization</b> — Roles and responsibilities should align with strengths.</li>
+          <li><b>Technical and managerial communications</b> — Effective communication between team members and stakeholders is essential.</li>
+        </ol>
+      </article>
+
+      <!-- 22.3.1 Selecting Group Members -->
+      <article class="article">
+        <h3 class="sch3">22.3.1 Selecting Group Members</h3>
+        <hr class="border-gray-300">
+        <p>Creating a cohesive group involves balancing technical skills and personalities. Often, project teams are composed of existing employees rather than new hires, which can limit the manager’s choice.</p>
+        <p>Groups with complementary personalities work better than those chosen purely for technical skill. Interaction-oriented people facilitate communication, detect tensions early, and promote harmony within the team.</p>
+
+        <p>If complementary personalities cannot be chosen, managers must ensure that individual goals don’t override group objectives. Involving all members in each stage of the project helps align goals and promote ownership of decisions.</p>
+      </article>
+
+      <!-- 22.3.2 Group Organization -->
+      <article class="article">
+        <h3 class="sch3">22.3.2 Group Organization</h3>
+        <hr class="border-gray-300">
+        <p>The way a group is organized affects decision-making, communication, and interaction with stakeholders. Important questions for managers include who makes technical decisions, how external communication is handled, and how remote members integrate effectively.</p>
+
+        <p>Small groups are often informal and collaborative, while hierarchical groups have clear authority and decision-making chains. Each has strengths and weaknesses depending on team composition and project type.</p>
+
+        <p>However, overly hierarchical structures can hinder communication and slow progress, especially when rapid technological change requires adaptability and information sharing between all levels.</p>
+      </article>
+
+      <!-- 22.3.3 Group Communications -->
+      <article class="article">
+        <h3 class="sch3">22.3.3 Group Communications</h3>
+        <hr class="border-gray-300">
+        <p>Effective communication ensures that team members share information, resolve problems, and understand project goals. It also strengthens group cohesiveness and builds trust.</p>
+
+        <p>Communication effectiveness depends on factors such as group size, structure, composition, physical environment, and communication channels used (e.g., meetings, emails, or online collaboration tools).</p>
+
+        <p>Project managers should promote two-way communication to foster discussion, mutual understanding, and problem-solving. Tools like wikis, blogs, and instant messaging can enhance collaboration, especially for distributed teams.</p>
+      </article>
+
+      <!-- Navigation -->
+      <nav class="flex justify-between mt-8">
+        <a href="mp.html" class="previousbtn">← Previous</a>
+        <a href="chapter22.html" class="nextbtn">Intro →</a>
+      </nav>
+
+    </section>
+  </main>
+
+  <!-- Inserted footer (from chapter13.html) -->
+  <footer class="bg-[#384166] border-t border-[#0B735F] mt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-[#0CDC2A] font-bold text-lg mb-2">Software Engineering</h3>
+          <p class="text-[#E3DBA9] text-sm">Software Engineering by Ian Sommerville is a comprehensive textbook that explains the principles, methods, and best practices for designing, developing, and maintaining high-quality software systems.</p>
+        </div>
+
+        <div>
+          <!-- Follow Us / placeholder (social links removed) -->
+        </div>
+
+        <div>
+          <h4 class="text-[#E3DBA9] font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">About The Book</a></li>
+            <li><a href="chapter.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Chapters</a></li>
+            <li><a href="members.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Members</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-[#0B735F] pt-8">
+        <p class="text-center text-[#E3DBA9] text-sm">© 2025 Book Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

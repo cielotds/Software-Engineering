@@ -1,6 +1,10 @@
+@import "tailwindcss";
 @theme {
     --color-primary: #0B735F;
     --color-secondary: #E3DBA9;
+    --color-primary: #0B735F;
+    --color-secondary: #384166;
+    --color-tertiary: #E3DBA9;
 }
 
 @layer components {
@@ -21,7 +25,7 @@
     }
 
     .title {
-        @apply text-lg sm:text-xl font-semibold mb-4 text-primary flex items-center;
+        @apply text-lg sm:text-xl font-semibold font-bold mb-4 text-primary flex items-center;
     }
 
     .s-title {
@@ -236,7 +240,107 @@
         @apply text-gray-700 text-sm sm:text-base;
     }
 
+    .kp-summary {
+        @apply title cursor-pointer select-none flex items-center justify-between;
+    }
+
+    .kp-span {
+        @apply transition-transform duration-300 group-open:rotate-180 inline-flex items-center justify-center w-6 h-6 bg-green-100 text-green-600 rounded-full text-sm font-bold;
+    }
+
     .span {
         @apply font-semibold text-primary;
     }
+
+    .format-article {
+        @apply bg-white p-6 rounded-2xl shadow-lg my-2 text-base sm:text-lg;
+    }
+}
+
+
+
+
+
+html{
+    scroll-behavior: smooth
+}
+
+@layer components{
+    .body{
+        @apply bg-green-50 text-gray-800 font-mono leading-relaxed;
+    }
+
+    .main{
+        @apply max-w-5xl mx-auto px-4 py-2;
+    }
+
+    .navbar{
+        @apply bg-primary text-white p-1px rounded-lg shadow-lg mb-32;
+    }
+
+    .nav-ul{
+        @apply flex justify-center gap-6 text-lg font-semibold;
+        padding-block: calc(var(--spacing) * 5);
+    }
+
+    .nav-hover{
+        @apply hover:text-yellow-300 transition duration-300;
+    }
+
+    /* Removed duplicate/overriding heading sizes:
+       .title and .h2 are defined earlier with appropriate responsive
+       sizes (text-lg / sm:text-xl and text-xl / sm:text-2xl). The
+       previous rules here set them to very large values (text-6xl / text-3xl)
+       and caused headings like "Table of Contents" to display too large.
+       If you want to tweak heading scales, update the earlier definitions
+       in this file under @layer components near the top. */
+
+    .format-article{
+        @apply bg-white p-6 rounded-2xl shadow-lg my-2 text-base sm:text-lg;
+    }
+    
+    .h3{
+        @apply text-2xl font-semibold text-primary mb-3;
+    }
+
+    .hr{
+        @apply border-t-4 border border-tertiary w-24 mx-auto my-3
+    }
+
+    .ul{
+        @apply list-disc pl-6 space-y-2;
+    }
+
+    .ch3{
+        @apply text-4xl md:text-5xl font-bold text-secondary mb-3;
+    }
+
+    .article{
+        @apply bg-white p-6 rounded-2xl shadow-lg space-y-4 mb-8;
+    }
+
+    .sch3{
+        @apply text-xl font-semibold text-primary;
+    }
+
+    .ol{
+        @apply list-decimal pl-6 space-y-2;
+    }
+
+    .nextbtn{
+        @apply bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-green-700 transition;
+    }
+
+    .previousbtn{
+        @apply bg-gray-300 text-gray-800 px-5 py-2 rounded-full font-semibold hover:bg-gray-200 transition;
+    }
+
+    .figure-image{
+        @apply  mx-auto rounded-lg shadow mb-2 w-72 h-auto;
+    }
+
+    .c{
+        @apply cmx-5 mb-12 bg-white/70 rounded-3xl p-8 lg:p-10 shadow-xl border-2 border-primary-600/20 grid grid-cols-1 gap-6
+    }
+
 }

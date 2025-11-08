@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter — Chapter Hub Style</title>
+  </head>
+  <body class="bg-gradient-to-br from-[#e0e7ff] via-[#f0fdf4] to-[#e0f2fe] text-gray-900 relative overflow-x-hidden">
+    <!-- Decorative blurred gradient circle (background) -->
+    <div class="pointer-events-none select-none absolute -top-32 -left-32 w-[32rem] h-[32rem] rounded-full bg-gradient-to-tr from-[#0CDC2A]/30 via-[#384166]/20 to-[#E3DBA9]/30 blur-3xl opacity-70 z-0"></div>
+    <!-- Decorative floating geometric shape (rotated square) -->
+    <div class="pointer-events-none select-none absolute top-1/2 right-0 transform translate-x-1/3 -translate-y-1/2 z-0">
+      <div class="w-40 h-40 bg-gradient-to-br from-[#0CDC2A]/40 to-[#384166]/30 rotate-12 rounded-2xl blur-lg opacity-60"></div>
+    </div>
+    <div class="relative z-10">
+      <!-- Navigation (copied from chapterhub.html) -->
+      <nav class="sticky top-0 z-50 bg-[#384166] border-b border-[#0B735F]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <a href="chapterhub.html" class="text-[#0CDC2A] font-bold text-xl">Software Engineering</a>
+            <div class="hidden md:flex gap-8">
+              <a href="chapterhub.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Home</a>
+              <a href="#" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Header (copied from chapterhub.html) -->
+      <header class="text-center py-12 px-4">
+        <h1 class="text-4xl font-bold text-[#384166] mb-4"></h1>
+        <p class="text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">
+          Discover the key concepts and ideas from Software Engineering by Ian Sommerville — a guide to understanding how software is built, managed, and improved.
+        </p>
+      </header>
+
+      <!-- Back Button outside main, on top with more spacing -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-2 mb-6">
+        <a href="chapterhub.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#384166] text-[#0CDC2A] font-semibold hover:bg-[#2c3250] transition-colors duration-300 text-sm shadow hover:shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          Back
+        </a>
+      </div>
+
+      <!-- Main content placeholder -->
+      <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-br from-gray-50 via-white to-green-50 min-h-[60vh] rounded-2xl shadow-xl">
+        <!-- Chapters cards -->
+        <section class="mb-12">
+          <h2 class="text-3xl font-bold text-[#384166] mb-8 text-center tracking-tight">Explore Chapters</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 bg-white/80 rounded-xl p-10 shadow-lg">
+            <!-- Chapter 1 -->
+            <a href="Chapter1.html" class="flex flex-col justify-between border border-green-200 bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 shadow hover:shadow-2xl hover:-translate-y-2 hover:border-green-400 transition-all duration-300 group min-h-[320px]">
+              <div>
+                <h3 class="text-2xl font-bold text-[#384166] mb-2 group-hover:text-green-700 transition">Chapter 1</h3>
+                <h4 class="text-lg font-semibold text-green-700 mb-2">Introduction & Foundations</h4>
+                <p class="text-sm text-gray-600 mb-4">by Charlie Villacoba</p>
+                <p class="text-base text-gray-700 mb-2">Core themes, contexts, and the definition of software engineering. Covers history, ethics, and key professional practices.</p>
+              </div>
+              <div class="mt-4">
+                <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold">Start Here</span>
+              </div>
+            </a>
+
+            <!-- Chapter 7 -->
+            <a href="chapter7.html" class="flex flex-col justify-between border border-purple-200 bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow hover:shadow-2xl hover:-translate-y-2 hover:border-purple-400 transition-all duration-300 group min-h-[320px]">
+              <div>
+                <h3 class="text-2xl font-bold text-[#384166] mb-2 group-hover:text-purple-700 transition">Chapter 7</h3>
+                <h4 class="text-lg font-semibold text-purple-700 mb-2">Object-Oriented Design</h4>
+                <p class="text-sm text-gray-600 mb-4">by Roi C. Rendal</p>
+                <p class="text-base text-gray-700 mb-2">Principles and practices of object-oriented design. Includes design patterns, modeling, and practical examples for robust systems.</p>
+              </div>
+              <div class="mt-4">
+                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-semibold">Design Focus</span>
+              </div>
+            </a>
+
+            <!-- Chapter 13 -->
+            <a href="chapter13.html" class="flex flex-col justify-between border border-blue-200 bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow hover:shadow-2xl hover:-translate-y-2 hover:border-blue-400 transition-all duration-300 group min-h-[320px]">
+              <div>
+                <h3 class="text-2xl font-bold text-[#384166] mb-2 group-hover:text-blue-700 transition">Chapter 13</h3>
+                <h4 class="text-lg font-semibold text-blue-700 mb-2">Dependability Engineering</h4>
+                <p class="text-sm text-gray-600 mb-4">by Cielo A. Tadas</p>
+                <p class="text-base text-gray-700 mb-2">Advanced topics in building reliable, safe, and secure systems. Includes redundancy, diversity, and real-world case studies.</p>
+              </div>
+              <div class="mt-4">
+                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold">Reliability</span>
+              </div>
+            </a>
+
+            <!-- Chapter 22 -->
+            <a href="chapter22.html" class="flex flex-col justify-between border border-yellow-200 bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 shadow hover:shadow-2xl hover:-translate-y-2 hover:border-yellow-400 transition-all duration-300 group min-h-[320px]">
+              <div>
+                <h3 class="text-2xl font-bold text-[#384166] mb-2 group-hover:text-yellow-700 transition">Chapter 22</h3>
+                <h4 class="text-lg font-semibold text-yellow-700 mb-2">Project Management</h4>
+                <p class="text-sm text-gray-600 mb-4">by Trishia Piliin</p>
+                <p class="text-base text-gray-700 mb-2">Managing people, risks, and teamwork in software projects. Practical advice for building effective teams and delivering results.</p>
+              </div>
+              <div class="mt-4">
+                <span class="inline-block bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full font-semibold">Management</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        
+      </main>
+
+      <!-- Footer (copied from chapterhub.html) -->
+      <footer class="bg-[#384166] border-t border-[#0B735F] mt-52">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 class="text-[#0CDC2A] font-bold text-lg mb-2">Software Engineering</h3>
+              <p class="text-[#E3DBA9] text-sm">Software Engineering by Ian Sommerville is a comprehensive textbook that explains the principles, methods, and best practices for designing, developing, and maintaining high-quality software systems.</p>
+            </div>
+
+            <div>
+              <!-- placeholder for social / extras -->
+            </div>
+
+            <div>
+              <h4 class="text-[#E3DBA9] font-semibold mb-4">Quick Links</h4>
+              <ul class="space-y-2 text-sm">
+                <li><a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About The Book</a></li>
+                <li><a href="chapterhub.html#chapters" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Chapters</a></li>
+                <li><a href="members.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Members</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border-t border-[#0B735F] pt-8">
+              <p class="text-center text-[#E3DBA9] text-sm">© 2025 Book Hub. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

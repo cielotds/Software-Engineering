@@ -1,29 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 13: Dependability Engineering</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chapter 13: Dependability Engineering</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="src/output.css" rel="stylesheet">
+
+    <!-- Load Tailwind and Google Fonts for header/footer and main content -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ui-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --heading-font: 'Merriweather', Georgia, 'Times New Roman', serif;
+        }
+        body, .body, .font-mono, .layout {
+            font-family: var(--ui-font) !important;
+        }
+        h1, h2, h3, h4, h5, h6,
+        .h3, .ch3, header h1 {
+            font-family: var(--heading-font) !important;
+        }
+        code, pre {
+            font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-[#ffffff] via-[#e0e7ff] to-[#f0fdf4] text-gray-800 relative overflow-x-hidden">
+
+    <!-- Decorative Background Elements -->
+    <div class="fixed inset-0 z-0">
+        <div class="absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-blue-50 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-full h-screen bg-gradient-to-t from-green-50 to-transparent"></div>
+    </div>
+
+    <!-- Large Gradient Circle -->
+    <div class="fixed -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-blue-100/30 via-green-100/30 to-blue-100/30 rounded-full blur-3xl z-0"></div>
+
+    <!-- Content wrapper to ensure content stays above gradients -->
+    <div class="relative z-10">
+
+	<!-- Inserted header (nav + centered page header) copied/adapted from chapter22.html -->
+	<nav class="fixed top-0 left-0 right-0 z-50 bg-[#384166] border-b border-[#0B735F]">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex justify-between items-center h-16">
+				<a href="chapterhub.html" class="text-[#0CDC2A] font-bold text-xl">Software Engineering</a>
+				<div class="hidden md:flex gap-8">
+					<a href="chapterhub.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">Home</a>
+					<a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A] transition-colors duration-300">About</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<header class="text-center py-8 px-4 bg-white mt-16 relative z-10">
+		<h1 class="text-3xl md:text-4xl font-bold text-[#384166] mb-2">Chapter 13: Dependability Engineering</h1>
+		<p class="text-base md:text-lg text-gray-600 max-w-xl mx-auto leading-relaxed">Chapter 13</p>
+		<!-- Animated gradient bar under header -->
+		<div class="mx-auto mt-4 h-1 w-32 rounded-full bg-gradient-to-r from-[#0CDC2A] via-[#E3DBA9] to-[#384166] animate-pulse"></div>
+	</header>
 
     <!--Chapter Nav-->
-    <main class="container mx-auto px-4 py-6 sm:py-8">
+    <main class="container mx-auto px-4 py-6 sm:py-8 relative z-10">
         <div class="flex flex-col lg:flex-row gap-6 sm:gap-8">
             <aside class="lg:w-1/4">
-                <div class="font-mono bg-white rounded-lg shadow p-4 sm:p-6 sticky top-4">
-                    <h3 class = "title">Table of Contents</h3>
+                <div class="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-4 sm:p-6 sticky top-20 transition-all duration-300">
+                    <h3 class="title">Table of Contents</h3>
                     <ul class="space-y-2">
-                        <li class = "li"><a href="#objectives" class="table-of-contents">Objectives</a></li>
+                        <li class="li"><a href="#objectives" class="table-of-contents">Objectives</a></li>
                         <li class="li"><a href="#contents" class="table-of-contents">Contents</a></li>
                         <li class="li"><a href="#introduction" class="table-of-contents">Introduction</a></li>
                         <li class="li"><a href="#redundancy" class="table-of-contents">Redundancy & Diversity</a></li>
                         <li class="li"><a href="#process" class="table-of-contents">Dependable Process</a></li>
                         <li class="li"><a href="#architecture" class="table-of-contents">System Architecture</a></li>
                         <li class="li"><a href="#programming" class="table-of-contents">Dependable Programming</a></li>
-                        <li class="li"><a href="#keypoints" class="table-of-contents">Key Points</a></li>
                     </ul>
                 </div>
             </aside>
@@ -33,7 +86,6 @@
                 <!--Objectives-->
                 <section id="objectives" class="mb-10 sm:mb-12 scroll-mt-20">
                     <div class="layout">
-                        <h2 class = "h2">Chapter 13: Dependability Engineering</h2>
                         <div class="mb-6">
                             <h3 class = "title">Objectives</h3>
                             <p class = "paragraph">The objective of this chapter is to discuss processes and techniques for developing highly dependable systems. When you have read this chapter you will:</p>
@@ -62,7 +114,7 @@
 
                 <!--Intro-->
                 <section id="introduction" class="mb-10 sm:mb-12 scroll-mt-20">
-                    <div class="layout">
+                    <div>
                         <h3 class = "title">Introduction</h3>
                         <p class = "paragraph">The use of software engineering techniques, better programming languages, and better quality management has led to significant improvements in dependability for most software. Nevertheless, system failures may still occur that affect the system's availability or lead to incorrect results being produced.</p>
                         
@@ -418,57 +470,86 @@
                 </section>
 
                 <!-- Key Points -->
-                <section id="keypoints" class="mb-10 sm:mb-12">
-                    <div class="layout">
-                    <h3 class = "title">KEY POINTS</h3>
-        
-                    <div class="kp-space">
+                <details class="bg-white p-4 rounded-lg shadow mb-4 group">
+                    <summary class="kp-summary">
+                        KEY POINTS
+                    </summary>
 
+                    <div class="mt-4 kp-space">
                         <div class="kp-b">
                             <p class="kp-t">
                                 <span class="span">Dependability in a program</span> can be achieved by avoiding the introduction of faults, by detecting and removing faults before system deployment, and by including fault-tolerance facilities that allow the system to remain operational after a fault has caused a system failure.
                             </p>
                         </div>
-                        
-                        <div class="kp-b">
-                            <p class="kp-t">
-                                The use of <span class="span">redundancy and diversity</span> in hardware, software processes, and software systems is essential to the development of dependable systems.
-                            </p>
-                        </div>
-
-                        <div class="kp-b">
-                            <p class="kp-t">
-                                The use of a <span class="span">well-defined, repeatable process</span> is essential if faults in a system are to be minimized. The process should include verification and validation activities at all stages, from requirements definition through to system implementation.
-                            </p>
-                        </div>
-
-                        <div class="kp-b">
-                            <p class="kp-t">
-                                <span class="span">Dependable system architectures</span> are system architectures that are designed for fault tolerance. There are a number of architectural styles that support fault tolerance including protection systems, self-monitoring architectures, and N-version programming.
-                            </p>
-                        </div>
-
-                        <div class="kp-b">
-                            <p class="kp-t">
-                                <span class="span">Software diversity is difficult to achieve</span> because it is practically impossible to ensure that each version of the software is truly independent.
-                            </p>
-                        </div>
-
-                        <div class="kp-b">
-                            <p class="kp-t">
-                                <span class="span">Dependable programming</span> relies on the inclusion of redundancy in a program to check the validity of inputs and the values of program variables.
-                            </p>
-                        </div>
-
-                        <div class="kp-b">
-                            <p class="kp-t">
-                                Some programming constructs and techniques, such as <span class="font-semibold text-[#0B735F]">go-to statements, pointers, recursion, inheritance, and floating-point numbers</span>, are inherently error prone. You should try to avoid these constructs when developing dependable systems.
-                            </p>
-                        </div>
+    
+                    <div class="kp-b">
+                        <p class="kp-t">
+                            The use of <span class="span">redundancy and diversity</span> in hardware, software processes, and software systems is essential to the development of dependable systems.
+                        </p>
                     </div>
-                </section>
+
+                    <div class="kp-b">
+                        <p class="kp-t">
+                            The use of a <span class="span">well-defined, repeatable process</span> is essential if faults in a system are to be minimized. The process should include verification and validation activities at all stages, from requirements definition through to system implementation.
+                        </p>
+                    </div>
+
+                    <div class="kp-b">
+                        <p class="kp-t">
+                            <span class="span">Dependable system architectures</span> are system architectures that are designed for fault tolerance. There are a number of architectural styles that support fault tolerance including protection systems, self-monitoring architectures, and N-version programming.
+                        </p>
+                    </div>
+
+                    <div class="kp-b">
+                        <p class="kp-t">
+                            <span class="span">Software diversity is difficult to achieve</span> because it is practically impossible to ensure that each version of the software is truly independent.
+                        </p>
+                    </div>
+
+                    <div class="kp-b">
+                        <p class="kp-t">
+                            <span class="span">Dependable programming</span> relies on the inclusion of redundancy in a program to check the validity of inputs and the values of program variables.
+                        </p>
+                    </div>
+
+                    <div class="kp-b">
+                        <p class="kp-t">
+                            Some programming constructs and techniques, such as <span class="span">go-to statements, pointers, recursion, inheritance, and floating-point numbers</span>, are inherently error prone. You should try to avoid these constructs when developing dependable systems.
+                        </p>
+                    </div>
+                </details>     
             </div>
         </div>
     </main>
+
+
+	<!-- Inserted footer copied from chapter22.html -->
+	<footer class="bg-[#384166] border-t border-[#0B735F] mt-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+				<div>
+					<h3 class="text-[#0CDC2A] font-bold text-lg mb-2">Software Engineering</h3>
+					<p class="text-[#E3DBA9] text-sm">Software Engineering by Ian Sommerville is a comprehensive textbook that explains the principles, methods, and best practices for designing, developing, and maintaining high-quality software systems.</p>
+				</div>
+
+				<div>
+					<!-- Follow Us / placeholder (social links removed) -->
+				</div>
+
+				<div>
+					<h4 class="text-[#E3DBA9] font-semibold mb-4">Quick Links</h4>
+					<ul class="space-y-2 text-sm">
+						<li><a href="about.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">About The Book</a></li>
+						<li><a href="chapter.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Chapters</a></li>
+						<li><a href="members.html" class="text-[#E3DBA9] hover:text-[#0CDC2A]">Members</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="border-t border-[#0B735F] pt-8">
+				<p class="text-center text-[#E3DBA9] text-sm">© 2025 Book Hub. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>
